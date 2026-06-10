@@ -31,6 +31,8 @@ export const fr: Dictionary = {
     copied: 'Copié ! Ouverture…',
     visit: 'Visiter le site',
     updated: 'Dernière mise à jour',
+    linkLabel: 'Lien de parrainage',
+    openLink: 'Ouvrir le lien de parrainage',
   },
   apps: {
     bolt: {

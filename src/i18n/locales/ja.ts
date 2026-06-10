@@ -31,6 +31,8 @@ export const ja: Dictionary = {
     copied: 'コピーしました！開いています…',
     visit: 'サイトを見る',
     updated: '最終更新日',
+    linkLabel: '紹介リンク',
+    openLink: '紹介リンクを開く',
   },
   apps: {
     bolt: {

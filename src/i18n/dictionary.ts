@@ -42,6 +42,8 @@ export interface Dictionary {
     copied: string;
     visit: string;
     updated: string;
+    linkLabel: string;
+    openLink: string;
   };
   apps: {
     bolt: AppCopy;

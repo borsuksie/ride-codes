@@ -18,6 +18,7 @@ const updatedLabel = entry.updatedAt
   : null;
 
 const initial = app.name.trim().charAt(0).toUpperCase();
+const isLinkCode = /^https?:\/\//i.test(entry.code);
 ---
 
 <article class="card" style={`--brand: ${app.color}`}>
@@ -31,11 +32,19 @@ const initial = app.name.trim().charAt(0).toUpperCase();
 
   <p class="description">{copy.description}</p>
 
-  <button class="code-btn" type="button" data-code={entry.code} data-url={entry.url} data-copied-text={card.copied}>
-    <span class="code-label">{card.codeLabel}</span>
-    <span class="code-value">{entry.code}</span>
-    <span class="cta">{card.copyButton}</span>
-  </button>
+  {isLinkCode ? (
+    <a class="code-btn link-btn" href={entry.code} target="_blank" rel="noopener noreferrer">
+      <span class="code-label">{card.linkLabel}</span>
+      <span class="code-value">{card.openLink}</span>
+      <span class="cta">{card.visit} ↗</span>
+    </a>
+  ) : (
+    <button class="code-btn" type="button" data-code={entry.code} data-url={entry.url} data-copied-text={card.copied}>
+      <span class="code-label">{card.codeLabel}</span>
+      <span class="code-value">{entry.code}</span>
+      <span class="cta">{card.copyButton}</span>
+    </button>
+  )}
 
   <div class="meta">
     <a href={entry.url} target="_blank" rel="noopener noreferrer">{card.visit} ↗</a>
@@ -116,6 +125,10 @@ const initial = app.name.trim().charAt(0).toUpperCase();
 
   .code-btn.copied {
     border-style: solid;
+  }
+
+  a.code-btn {
+    text-decoration: none;
   }
 
   .code-label {

@@ -31,6 +31,8 @@ export const pt: Dictionary = {
     copied: 'Copiado! A abrir…',
     visit: 'Visitar site',
     updated: 'Última atualização',
+    linkLabel: 'Link de referência',
+    openLink: 'Abrir link de referência',
   },
   apps: {
     bolt: {

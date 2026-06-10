@@ -31,6 +31,8 @@ export const ru: Dictionary = {
     copied: 'Скопировано! Открываем…',
     visit: 'Перейти на сайт',
     updated: 'Последнее обновление',
+    linkLabel: 'Реферальная ссылка',
+    openLink: 'Открыть реферальную ссылку',
   },
   apps: {
     bolt: {

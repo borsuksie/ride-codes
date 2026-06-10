@@ -31,6 +31,8 @@ export const zh: Dictionary = {
     copied: '已复制！正在打开…',
     visit: '访问网站',
     updated: '最后更新',
+    linkLabel: '推荐链接',
+    openLink: '打开推荐链接',
   },
   apps: {
     bolt: {

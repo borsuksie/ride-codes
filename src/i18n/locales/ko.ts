@@ -31,6 +31,8 @@ export const ko: Dictionary = {
     copied: '복사 완료! 여는 중…',
     visit: '웹사이트 방문',
     updated: '마지막 업데이트',
+    linkLabel: '추천 링크',
+    openLink: '추천 링크 열기',
   },
   apps: {
     bolt: {
