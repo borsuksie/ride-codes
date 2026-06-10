@@ -13,6 +13,8 @@ export interface CountryPageCopy {
   description: string;
   heading: string;
   intro: string;
+  tipsHeading: string;
+  tips: { title: string; text: string }[];
 }
 
 export interface Dictionary {

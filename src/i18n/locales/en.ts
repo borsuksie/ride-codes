@@ -142,12 +142,42 @@ export const en: Dictionary = {
       description: 'Plan your trip to Poland with verified discount codes for ride-hailing, eSIM data, banking, food delivery and more — everything tourists need in one place.',
       heading: 'Poland travel guide',
       intro: 'Everything you need for a trip to Poland: ride-hailing and eSIM discounts, a Polish bank account, food delivery and other money-saving apps for tourists.',
+      tipsHeading: 'Practical tips for Poland',
+      tips: [
+        {
+          title: 'Getting from the airport',
+          text: 'Polish airports have official taxi ranks, but booking a Bolt or Uber from your phone is usually 30-50% cheaper and shows you the price upfront.',
+        },
+        {
+          title: 'Getting around by tram and bus',
+          text: 'Most Polish cities have extensive tram and bus networks. Buy tickets through a local app or a ticket machine, and validate paper tickets as soon as you board.',
+        },
+        {
+          title: 'Money, cards and connectivity',
+          text: 'Poland uses the złoty (PLN), not the euro. Cards are widely accepted, but a multi-currency card and a local eSIM will save you fees and get you online instantly.',
+        },
+      ],
     },
     japan: {
       title: 'Japan Travel Guide 2026: eSIM, Travel Cards & Discount Codes',
       description: 'Plan your trip to Japan with discount codes for eSIM data plans, multi-currency travel cards and other useful travel apps.',
       heading: 'Japan travel guide',
       intro: 'Everything you need for a trip to Japan: eSIM data plans, travel money cards and other useful apps for getting around and saving money.',
+      tipsHeading: 'Practical tips for Japan',
+      tips: [
+        {
+          title: 'Getting from the airport',
+          text: 'From Narita or Haneda, a train such as the Narita Express, Keisei Skyliner or Tokyo Monorail is usually faster and far cheaper than a taxi into central Tokyo.',
+        },
+        {
+          title: 'IC cards for trains and buses',
+          text: 'A rechargeable IC card like Suica or Pasmo (or its digital version on your phone) works on almost all trains, subways and buses across Japan.',
+        },
+        {
+          title: 'Cash, eSIM and etiquette',
+          text: 'Many smaller shops and restaurants are cash-only, so carry yen. Activate an eSIM or pocket WiFi before you arrive, and note that tipping is not expected in Japan.',
+        },
+      ],
     },
   },
   home: {

@@ -142,12 +142,42 @@ export const pt: Dictionary = {
       description: 'Planeie a sua viagem à Polónia com códigos de desconto verificados para apps de transporte, eSIM, conta bancária, entrega de comida e mais — tudo o que um turista precisa num só lugar.',
       heading: 'Guia de viagem à Polónia',
       intro: 'Tudo o que precisa para uma viagem à Polónia: descontos em transporte e eSIM, uma conta bancária polaca, entrega de comida e outras apps para poupar.',
+      tipsHeading: 'Dicas práticas para a Polónia',
+      tips: [
+        {
+          title: 'Do aeroporto para a cidade',
+          text: 'Os aeroportos polacos têm praças de táxi oficiais, mas reservar com Bolt ou Uber costuma ser 30-50% mais barato e mostra o preço antecipadamente.',
+        },
+        {
+          title: 'Andar de elétrico e autocarro',
+          text: 'A maioria das cidades polacas tem uma boa rede de elétricos e autocarros. Compre os bilhetes numa app local ou máquina e valide-os assim que entrar.',
+        },
+        {
+          title: 'Dinheiro, cartões e internet',
+          text: 'A Polónia usa o złoty (PLN), não o euro. Os cartões são amplamente aceites, mas um cartão multimoeda e um eSIM local poupam comissões e ligam-no à internet de imediato.',
+        },
+      ],
     },
     japan: {
       title: 'Guia de viagem ao Japão 2026: eSIM, cartões de viagem e códigos de desconto',
       description: 'Planeie a sua viagem ao Japão com códigos de desconto para planos eSIM, cartões de viagem multimoeda e outras apps úteis.',
       heading: 'Guia de viagem ao Japão',
       intro: 'Tudo o que precisa para uma viagem ao Japão: planos eSIM, cartões de viagem e outras apps úteis para se deslocar e poupar.',
+      tipsHeading: 'Dicas práticas para o Japão',
+      tips: [
+        {
+          title: 'Do aeroporto para a cidade',
+          text: 'A partir de Narita ou Haneda, um comboio como o Narita Express, o Keisei Skyliner ou o monocarril de Tóquio costuma ser mais rápido e muito mais barato do que um táxi até ao centro.',
+        },
+        {
+          title: 'Cartão IC para comboios e autocarros',
+          text: 'Um cartão IC recarregável como o Suica ou o Pasmo (também disponível no telemóvel) funciona em quase todos os comboios, metros e autocarros do Japão.',
+        },
+        {
+          title: 'Dinheiro, eSIM e etiqueta',
+          text: 'Muitas lojas e restaurantes pequenos só aceitam dinheiro, por isso leve ienes. Ative um eSIM ou pocket WiFi antes de chegar — gorjetas não são esperadas no Japão.',
+        },
+      ],
     },
   },
   home: {

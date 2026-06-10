@@ -146,6 +146,18 @@ const jsonLd = [
       </section>
     ))}
 
+    <section class="tips">
+      <h2>{page.tipsHeading}</h2>
+      <div class="grid">
+        {page.tips.map((tip) => (
+          <div class="tip">
+            <h3>{tip.title}</h3>
+            <p>{tip.text}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
     <section class="cross-link">
       <h2>{otherPage.heading}</h2>
       <p>{otherPage.intro}</p>
@@ -259,6 +271,32 @@ const jsonLd = [
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1rem;
+  }
+
+  .tips {
+    margin-bottom: 2.5rem;
+  }
+
+  .tips h2 {
+    margin-bottom: 1rem;
+  }
+
+  .tip {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+  }
+
+  .tip h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.05rem;
+  }
+
+  .tip p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
   }
 
   .cross-link {

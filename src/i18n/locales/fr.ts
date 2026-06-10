@@ -142,12 +142,42 @@ export const fr: Dictionary = {
       description: 'Préparez votre voyage en Pologne avec des codes promo vérifiés pour les VTC, l\'eSIM, un compte bancaire, la livraison de repas et plus encore — tout ce dont les touristes ont besoin au même endroit.',
       heading: 'Guide de voyage en Pologne',
       intro: 'Tout ce qu\'il vous faut pour un voyage en Pologne : réductions sur les VTC et l\'eSIM, un compte bancaire polonais, la livraison de repas et d\'autres applis pour économiser.',
+      tipsHeading: 'Conseils pratiques pour la Pologne',
+      tips: [
+        {
+          title: 'Depuis l\'aéroport',
+          text: 'Les aéroports polonais ont des stations de taxis officielles, mais réserver avec Bolt ou Uber coûte généralement 30 à 50 % moins cher et affiche le prix à l\'avance.',
+        },
+        {
+          title: 'Se déplacer en tram et en bus',
+          text: 'La plupart des villes polonaises ont un large réseau de trams et de bus. Achetez vos billets via une appli locale ou un distributeur, et validez-les dès la montée.',
+        },
+        {
+          title: 'Argent, cartes et connexion',
+          text: 'La Pologne utilise le złoty (PLN), pas l\'euro. Les cartes sont largement acceptées, mais une carte multidevises et une eSIM locale évitent les frais et vous connectent immédiatement.',
+        },
+      ],
     },
     japan: {
       title: 'Guide de voyage au Japon 2026 : eSIM, cartes de voyage et codes promo',
       description: 'Préparez votre voyage au Japon avec des codes promo pour les forfaits eSIM, les cartes de paiement multidevises et d\'autres applis utiles.',
       heading: 'Guide de voyage au Japon',
       intro: 'Tout ce qu\'il vous faut pour un voyage au Japon : forfaits eSIM, cartes de voyage et d\'autres applis utiles pour se déplacer et économiser.',
+      tipsHeading: 'Conseils pratiques pour le Japon',
+      tips: [
+        {
+          title: 'Depuis l\'aéroport',
+          text: 'Depuis Narita ou Haneda, un train comme le Narita Express, le Keisei Skyliner ou le monorail de Tokyo est généralement plus rapide et bien moins cher qu\'un taxi vers le centre.',
+        },
+        {
+          title: 'Carte IC pour trains et bus',
+          text: 'Une carte IC rechargeable comme Suica ou Pasmo (aussi disponible sur smartphone) fonctionne dans presque tous les trains, métros et bus du Japon.',
+        },
+        {
+          title: 'Espèces, eSIM et savoir-vivre',
+          text: 'De nombreux petits commerces n\'acceptent que les espèces, prévoyez des yens. Activez votre eSIM ou un routeur pocket WiFi avant d\'arriver — le pourboire n\'est pas attendu au Japon.',
+        },
+      ],
     },
   },
   home: {

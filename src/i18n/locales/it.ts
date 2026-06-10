@@ -142,12 +142,42 @@ export const it: Dictionary = {
       description: 'Pianifica il tuo viaggio in Polonia con codici sconto verificati per ride-hailing, eSIM, conto bancario, consegna cibo e altro — tutto ciò che serve a un turista in un unico posto.',
       heading: 'Guida di viaggio in Polonia',
       intro: 'Tutto quello che ti serve per un viaggio in Polonia: sconti su ride-hailing ed eSIM, un conto bancario polacco, consegna cibo e altre app per risparmiare.',
+      tipsHeading: 'Consigli pratici per la Polonia',
+      tips: [
+        {
+          title: 'Dall\'aeroporto',
+          text: 'Gli aeroporti polacchi hanno taxi ufficiali, ma prenotare con Bolt o Uber costa di solito il 30-50% in meno e mostra subito il prezzo.',
+        },
+        {
+          title: 'Spostarsi in tram e autobus',
+          text: 'La maggior parte delle città polacche ha una rete di tram e autobus molto estesa. Acquista i biglietti tramite app locale o biglietteria automatica e convalidali appena sali.',
+        },
+        {
+          title: 'Soldi, carte e connessione',
+          text: 'In Polonia si paga in złoty (PLN), non in euro. Le carte sono accettate quasi ovunque, ma una carta multivaluta e una eSIM locale evitano commissioni e ti connettono subito.',
+        },
+      ],
     },
     japan: {
       title: 'Guida di viaggio in Giappone 2026: eSIM, carte di viaggio e codici sconto',
       description: 'Pianifica il tuo viaggio in Giappone con codici sconto per piani eSIM, carte di viaggio multivaluta e altre app utili.',
       heading: 'Guida di viaggio in Giappone',
       intro: 'Tutto quello che ti serve per un viaggio in Giappone: piani eSIM, carte di viaggio e altre app utili per spostarsi e risparmiare.',
+      tipsHeading: 'Consigli pratici per il Giappone',
+      tips: [
+        {
+          title: 'Dall\'aeroporto',
+          text: 'Da Narita o Haneda, un treno come il Narita Express, il Keisei Skyliner o il monorotaia di Tokyo è di solito più veloce e molto più economico di un taxi verso il centro.',
+        },
+        {
+          title: 'Carta IC per treni e autobus',
+          text: 'Una carta IC ricaricabile come Suica o Pasmo (disponibile anche sullo smartphone) funziona su quasi tutti i treni, le metropolitane e gli autobus del Giappone.',
+        },
+        {
+          title: 'Contanti, eSIM ed etichetta',
+          text: 'Molti piccoli negozi e ristoranti accettano solo contanti, quindi porta con te yen. Attiva una eSIM o un pocket WiFi prima di arrivare — la mancia non è prevista in Giappone.',
+        },
+      ],
     },
   },
   home: {

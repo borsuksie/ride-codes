@@ -142,12 +142,42 @@ export const pl: Dictionary = {
       description: 'Zaplanuj wyjazd do Polski z zweryfikowanymi kodami rabatowymi na przejazdy, eSIM, konto bankowe, dostawę jedzenia i więcej — wszystko, czego potrzebuje turysta, w jednym miejscu.',
       heading: 'Przewodnik po Polsce',
       intro: 'Wszystko, czego potrzebujesz na wyjazd do Polski: zniżki na przejazdy i eSIM, polskie konto bankowe, dostawa jedzenia i inne aplikacje pozwalające oszczędzać.',
+      tipsHeading: 'Praktyczne wskazówki dla Polski',
+      tips: [
+        {
+          title: 'Jak dojechać z lotniska',
+          text: 'Na polskich lotniskach są oficjalne postoje taksówek, ale zamówienie przejazdu przez Bolt lub Uber jest zwykle o 30-50% tańsze i od razu pokazuje cenę.',
+        },
+        {
+          title: 'Poruszanie się tramwajem i autobusem',
+          text: 'Większość polskich miast ma rozbudowaną sieć tramwajów i autobusów. Bilety kup w aplikacji miejskiej lub biletomacie i skasuj od razu po wejściu.',
+        },
+        {
+          title: 'Pieniądze, karty i internet',
+          text: 'W Polsce płaci się złotówkami (PLN), nie euro. Karty są akceptowane niemal wszędzie, ale wielowalutowa karta i lokalny eSIM pozwolą uniknąć opłat i od razu mieć internet.',
+        },
+      ],
     },
     japan: {
       title: 'Japonia — przewodnik dla turystów 2026: eSIM, karty podróżne i kody rabatowe',
       description: 'Zaplanuj wyjazd do Japonii z kodami rabatowymi na eSIM, wielowalutowe karty podróżne i inne przydatne aplikacje.',
       heading: 'Przewodnik po Japonii',
       intro: 'Wszystko, czego potrzebujesz na wyjazd do Japonii: pakiety eSIM, karty podróżne i inne przydatne aplikacje do poruszania się i oszczędzania.',
+      tipsHeading: 'Praktyczne wskazówki dla Japonii',
+      tips: [
+        {
+          title: 'Jak dojechać z lotniska',
+          text: 'Z Narity lub Haneda do centrum Tokio najszybciej i najtaniej dojedziesz pociągiem (Narita Express, Keisei Skyliner lub Tokyo Monorail) — taksówka na takim dystansie jest bardzo droga.',
+        },
+        {
+          title: 'Karta IC do pociągów i autobusów',
+          text: 'Doładowywalna karta IC, np. Suica lub Pasmo (także w wersji cyfrowej na telefonie), działa niemal we wszystkich pociągach, metrze i autobusach w Japonii.',
+        },
+        {
+          title: 'Gotówka, eSIM i etykieta',
+          text: 'Wiele mniejszych restauracji i sklepów przyjmuje tylko gotówkę, więc miej przy sobie jeny. Aktywuj eSIM lub pocket WiFi przed przylotem — napiwki w Japonii nie są oczekiwane.',
+        },
+      ],
     },
   },
   home: {

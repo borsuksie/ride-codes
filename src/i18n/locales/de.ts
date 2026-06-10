@@ -142,12 +142,42 @@ export const de: Dictionary = {
       description: 'Plane deine Reise nach Polen mit geprüften Rabattcodes für Fahrdienste, eSIM-Datenpläne, Bankkonten, Essenslieferungen und mehr — alles, was Touristen brauchen, an einem Ort.',
       heading: 'Polen-Reiseführer',
       intro: 'Alles für deine Reise nach Polen: Rabatte auf Fahrdienste und eSIM, ein polnisches Bankkonto, Essenslieferungen und weitere Apps, mit denen du sparst.',
+      tipsHeading: 'Praktische Tipps für Polen',
+      tips: [
+        {
+          title: 'Vom Flughafen in die Stadt',
+          text: 'Polnische Flughäfen haben offizielle Taxistände, aber eine Fahrt mit Bolt oder Uber ist meist 30-50% günstiger und zeigt den Preis vorab an.',
+        },
+        {
+          title: 'Mit Tram und Bus unterwegs',
+          text: 'Die meisten polnischen Städte haben ein dichtes Tram- und Busnetz. Tickets gibt es in der App oder am Automaten — entwerten Sie Papiertickets sofort beim Einsteigen.',
+        },
+        {
+          title: 'Geld, Karten und Internet',
+          text: 'In Polen wird in Złoty (PLN) bezahlt, nicht in Euro. Karten werden überall akzeptiert, aber eine Multiwährungskarte und eine lokale eSIM sparen Gebühren und bringen Sie sofort online.',
+        },
+      ],
     },
     japan: {
       title: 'Japan-Reiseführer 2026: eSIM, Reisekarten & Rabattcodes',
       description: 'Plane deine Reise nach Japan mit Rabattcodes für eSIM-Datenpläne, Multiwährungs-Reisekarten und weitere nützliche Reise-Apps.',
       heading: 'Japan-Reiseführer',
       intro: 'Alles für deine Reise nach Japan: eSIM-Datenpläne, Reisekarten und weitere nützliche Apps für unterwegs und zum Sparen.',
+      tipsHeading: 'Praktische Tipps für Japan',
+      tips: [
+        {
+          title: 'Vom Flughafen in die Stadt',
+          text: 'Von Narita oder Haneda ist ein Zug wie der Narita Express, Keisei Skyliner oder die Tokyo Monorail meist schneller und deutlich günstiger als ein Taxi nach Tokio.',
+        },
+        {
+          title: 'IC-Karte für Bahn und Bus',
+          text: 'Eine aufladbare IC-Karte wie Suica oder Pasmo (auch digital auf dem Handy) funktioniert in fast allen Zügen, U-Bahnen und Bussen in Japan.',
+        },
+        {
+          title: 'Bargeld, eSIM und Etikette',
+          text: 'Viele kleinere Geschäfte und Restaurants akzeptieren nur Bargeld, also Yen mitnehmen. Aktivieren Sie eine eSIM oder Pocket-WiFi vor der Ankunft — Trinkgeld ist in Japan nicht üblich.',
+        },
+      ],
     },
   },
   home: {

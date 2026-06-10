@@ -142,12 +142,42 @@ export const es: Dictionary = {
       description: 'Planifica tu viaje a Polonia con códigos de descuento verificados para apps de transporte, eSIM, cuenta bancaria, entrega de comida y más — todo lo que necesita un turista en un solo lugar.',
       heading: 'Guía de viaje a Polonia',
       intro: 'Todo lo que necesitas para tu viaje a Polonia: descuentos en transporte y eSIM, una cuenta bancaria polaca, entrega de comida y otras apps para ahorrar.',
+      tipsHeading: 'Consejos prácticos para Polonia',
+      tips: [
+        {
+          title: 'Desde el aeropuerto',
+          text: 'Los aeropuertos polacos tienen paradas de taxi oficiales, pero reservar con Bolt o Uber suele ser un 30-50% más barato y muestra el precio por adelantado.',
+        },
+        {
+          title: 'Moverse en tranvía y autobús',
+          text: 'La mayoría de las ciudades polacas tienen una amplia red de tranvías y autobuses. Compra los billetes en una app local o en una máquina y valídalos al subir.',
+        },
+        {
+          title: 'Dinero, tarjetas y conexión',
+          text: 'Polonia usa el złoty (PLN), no el euro. Las tarjetas se aceptan casi en todas partes, pero una tarjeta multidivisa y una eSIM local te ahorran comisiones y te conectan al instante.',
+        },
+      ],
     },
     japan: {
       title: 'Guía de viaje a Japón 2026: eSIM, tarjetas de viaje y códigos de descuento',
       description: 'Planifica tu viaje a Japón con códigos de descuento para planes eSIM, tarjetas de viaje multidivisa y otras apps útiles.',
       heading: 'Guía de viaje a Japón',
       intro: 'Todo lo que necesitas para tu viaje a Japón: planes eSIM, tarjetas de viaje y otras apps útiles para moverte y ahorrar.',
+      tipsHeading: 'Consejos prácticos para Japón',
+      tips: [
+        {
+          title: 'Desde el aeropuerto',
+          text: 'Desde Narita o Haneda, un tren como el Narita Express, el Keisei Skyliner o el monorraíl de Tokio suele ser más rápido y mucho más barato que un taxi al centro.',
+        },
+        {
+          title: 'Tarjeta IC para trenes y autobuses',
+          text: 'Una tarjeta IC recargable como Suica o Pasmo (también disponible en el móvil) funciona en casi todos los trenes, metros y autobuses de Japón.',
+        },
+        {
+          title: 'Efectivo, eSIM y etiqueta',
+          text: 'Muchos comercios pequeños solo aceptan efectivo, lleva yenes contigo. Activa tu eSIM o un pocket WiFi antes de llegar — las propinas no se esperan en Japón.',
+        },
+      ],
     },
   },
   home: {
