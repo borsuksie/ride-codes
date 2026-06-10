@@ -16,8 +16,16 @@ const t = getDictionary(locale);
 const codes = await getAllCodes();
 
 const countryKey = country === 'PL' ? 'poland' : 'japan';
-const path = `${countryKey}/`;
+const isHome = country === 'PL';
+const path = isHome ? '' : `${countryKey}/`;
 const page = t.countryPages[countryKey];
+
+const otherKey = isHome ? 'japan' : 'poland';
+const otherPath = isHome ? 'japan/' : '';
+const otherPage = t.countryPages[otherKey];
+
+const pageTitle = isHome ? t.meta.title : page.title;
+const pageDescription = isHome ? t.meta.description : page.description;
 
 const site = Astro.site ?? new URL('https://example.com');
 const pageUrl = new URL(`/${locale}/${path}`, site).toString();
@@ -35,29 +43,31 @@ const sectionsWithApps = sectionOrder
 const jsonLd = [
   {
     '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    name: page.title,
+    '@type': isHome ? 'WebSite' : 'CollectionPage',
+    name: pageTitle,
     url: pageUrl,
-    description: page.description,
+    description: pageDescription,
     inLanguage: locale,
     about: {
       '@type': 'Country',
       name: t.countries[countryKey],
     },
-    isPartOf: {
-      '@type': 'WebSite',
-      name: t.meta.title,
-      url: homeUrl,
-    },
+    ...(isHome ? {} : {
+      isPartOf: {
+        '@type': 'WebSite',
+        name: t.meta.title,
+        url: homeUrl,
+      },
+    }),
   },
-  {
+  ...(isHome ? [] : [{
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: t.home.heading, item: homeUrl },
       { '@type': 'ListItem', position: 2, name: t.countries[countryKey], item: pageUrl },
     ],
-  },
+  }]),
   {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -99,18 +109,20 @@ const jsonLd = [
 ];
 ---
 
-<BaseLayout locale={locale} title={page.title} description={page.description} path={path} jsonLd={jsonLd}>
+<BaseLayout locale={locale} title={pageTitle} description={pageDescription} path={path} jsonLd={jsonLd}>
   <header class="site-header">
     <a class="brand" href={`/${locale}/`}>🚕 RideCodes</a>
     <LanguageSwitcher locale={locale} path={path} label={t.nav.selectLanguage} />
   </header>
 
   <main>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href={`/${locale}/`}>{t.home.heading}</a>
-      <span aria-hidden="true">/</span>
-      <span aria-current="page">{t.countries[countryKey]}</span>
-    </nav>
+    {!isHome && (
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href={`/${locale}/`}>{t.home.heading}</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{t.countries[countryKey]}</span>
+      </nav>
+    )}
 
     <section class="hero">
       <h1>{page.heading}</h1>
@@ -133,6 +145,12 @@ const jsonLd = [
         </div>
       </section>
     ))}
+
+    <section class="cross-link">
+      <h2>{otherPage.heading}</h2>
+      <p>{otherPage.intro}</p>
+      <a class="cta" href={`/${locale}/${otherPath}`}>{t.home.visitCountry} →</a>
+    </section>
 
     <section class="faq">
       <h2>{t.faq.heading}</h2>
@@ -241,6 +259,29 @@ const jsonLd = [
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1rem;
+  }
+
+  .cross-link {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .cross-link h2 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+  }
+
+  .cross-link p {
+    color: var(--muted);
+  }
+
+  .cross-link .cta {
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
   }
 
   .faq {

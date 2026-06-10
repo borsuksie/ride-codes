@@ -50,7 +50,6 @@ export interface Dictionary {
     yesim: AppCopy;
     yesimJp: AppCopy;
     go: AppCopy;
-    nordvpn: AppCopy;
     revolut: AppCopy;
     mbank: AppCopy;
     wise: AppCopy;
@@ -59,6 +58,9 @@ export interface Dictionary {
     wolt: AppCopy;
     lisek: AppCopy;
     lime: AppCopy;
+    japanwireless: AppCopy;
+    klook: AppCopy;
+    getyourguide: AppCopy;
   };
   sections: {
     mustHave: SectionCopy;

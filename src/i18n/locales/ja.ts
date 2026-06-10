@@ -4,7 +4,7 @@ export const ja: Dictionary = {
   meta: {
     title: 'ポーランド・日本のタクシー割引コード＆eSIMセール情報',
     description:
-      'ポーランドと日本でお得に旅行しよう。BoltとFREENOWの割引コード、格安eSIM「Yesim」に加え、NordVPN、Revolut、Wise、Wolt、Glovoなどのボーナスコードもまとめました。情報は随時更新中。',
+      'ポーランドと日本でお得に旅行しよう。BoltとFREENOWの割引コード、格安eSIM「Yesim」に加え、Uber、Revolut、Wise、Wolt、Glovoなどのボーナスコードもまとめました。情報は随時更新中。',
   },
   hero: {
     title: '高い空港タクシーは卒業しよう',
@@ -63,11 +63,6 @@ export const ja: Dictionary = {
       description:
         'GOは日本で最も利用されているタクシー配車アプリで、東京、大阪、京都など主要都市をカバーしています。正規ライセンスのタクシーをメーター料金で呼べて、アプリ内でキャッシュレス決済も可能です。',
     },
-    nordvpn: {
-      tagline: '安全な旅行のためのVPN',
-      description:
-        'NordVPNは通信を暗号化し、空港やホテル、カフェの公衆Wi-Fiを安全に利用したり、海外から自国のコンテンツにアクセスしたりできます。下記コードでサブスクリプションの割引が受けられます。',
-    },
     revolut: {
       tagline: '多通貨対応カード',
       description:
@@ -107,6 +102,18 @@ export const ja: Dictionary = {
       tagline: '電動キックボード・電動自転車',
       description:
         'Limeの電動キックボードや電動自転車は、ポーランドなどの都市を移動するのに便利な手段です。下記のコードで無料の利用クレジットが受けられます。',
+    },
+    japanwireless: {
+      tagline: '日本向けポケットWiFi・eSIM',
+      description: 'Japan Wirelessは、空港で受け取れるポケットWiFiルーターのレンタルや、ホテルに届けてもらえるeSIMを提供しています。通常のeSIMの代替やバックアップとして便利です。下記のコードでご注文時に割引が受けられます。',
+    },
+    klook: {
+      tagline: 'ツアー・アクティビティ・交通パス',
+      description: 'Klookでは、日本各地のツアー、観光施設のチケット、空港送迎、交通パスを事前に予約でき、現地購入より安いことがよくあります。下記のコードで予約時に割引が受けられます。',
+    },
+    getyourguide: {
+      tagline: 'ツアー・アクティビティ',
+      description: 'GetYourGuideでは、日本各地の人気観光地向けのツアー、日帰り旅行、優先入場チケットを予約できます。下記のコードで初回予約時に割引が受けられます。',
     },
   },
   sections: {

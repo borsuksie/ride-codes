@@ -4,7 +4,7 @@ export const zh: Dictionary = {
   meta: {
     title: '波兰、日本打车优惠码与eSIM折扣信息',
     description:
-      '在波兰和日本省钱攻略：Bolt 和 FREENOW 优惠码、超值 Yesim eSIM 流量套餐，以及 NordVPN、Revolut、Wise、Wolt、Glovo 等更多奖励代码，定期更新。',
+      '在波兰和日本省钱攻略：Bolt 和 FREENOW 优惠码、超值 Yesim eSIM 流量套餐，以及 Uber、Revolut、Wise、Wolt、Glovo 等更多奖励代码，定期更新。',
   },
   hero: {
     title: '告别昂贵的机场出租车',
@@ -63,11 +63,6 @@ export const zh: Dictionary = {
       description:
         'GO 是日本使用最广泛的出租车叫车应用，覆盖东京、大阪、京都等大多数主要城市。可按官方计价器价格预约持牌出租车，并支持应用内无现金支付。',
     },
-    nordvpn: {
-      tagline: '安全旅行VPN',
-      description:
-        'NordVPN 可加密你的网络连接，让你在机场、酒店和咖啡馆安全使用公共Wi-Fi，并在国外访问国内的内容。使用下方代码可享受订阅折扣。',
-    },
     revolut: {
       tagline: '多币种旅行卡',
       description:
@@ -107,6 +102,18 @@ export const zh: Dictionary = {
       tagline: '电动滑板车与电动自行车',
       description:
         'Lime 的电动滑板车和电动自行车是在波兰等地城市出行的便捷方式。使用下方代码可获得免费骑行额度。',
+    },
+    japanwireless: {
+      tagline: '日本随身WiFi与eSIM',
+      description: 'Japan Wireless 提供可在机场领取的随身WiFi路由器租赁服务，也提供可送至酒店的eSIM，是普通eSIM的良好替代或备用方案。使用下方优惠码可在下单时享受折扣。',
+    },
+    klook: {
+      tagline: '日本各地的旅游、活动与交通票券',
+      description: 'Klook 可以提前预订日本各地的旅游行程、景点门票、机场接送和交通票券，通常比现场购买更划算。使用下方优惠码可在预订时享受折扣。',
+    },
+    getyourguide: {
+      tagline: '旅游与活动',
+      description: 'GetYourGuide 提供日本各热门景点的可预订游览、一日游和免排队门票。使用下方优惠码可在首次预订时享受折扣。',
     },
   },
   sections: {

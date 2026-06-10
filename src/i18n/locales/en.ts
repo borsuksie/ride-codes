@@ -4,7 +4,7 @@ export const en: Dictionary = {
   meta: {
     title: 'Taxi Promo Codes & eSIM Discounts for Poland & Japan',
     description:
-      'Save money in Poland and Japan: verified promo codes for Bolt and FREENOW ride-hailing apps, Yesim eSIM data plans, plus bonus codes for NordVPN, Revolut, Wise, Wolt, Glovo and more. Updated regularly.',
+      'Save money in Poland and Japan: verified promo codes for Bolt and FREENOW ride-hailing apps, Yesim eSIM data plans, plus bonus codes for Uber, Revolut, Wise, Wolt, Glovo and more. Updated regularly.',
   },
   hero: {
     title: 'Skip the expensive airport taxi',
@@ -63,11 +63,6 @@ export const en: Dictionary = {
       description:
         'GO is the most widely used taxi-hailing app in Japan, covering Tokyo, Osaka, Kyoto and most major cities. It connects you with licensed taxis at official metered prices, with cashless in-app payment.',
     },
-    nordvpn: {
-      tagline: 'VPN for safe travel',
-      description:
-        'NordVPN encrypts your connection so you can safely use public Wi-Fi at airports, hotels and cafes, and access your home content while abroad. Use the code below for a discount on a subscription.',
-    },
     revolut: {
       tagline: 'Multi-currency travel card',
       description:
@@ -107,6 +102,18 @@ export const en: Dictionary = {
       tagline: 'E-scooters & e-bikes',
       description:
         'Lime e-scooters and e-bikes are a fast way to get around cities in Poland and beyond. Use the code below for free ride credit.',
+    },
+    japanwireless: {
+      tagline: 'Pocket WiFi & eSIM for Japan',
+      description: 'Japan Wireless rents pocket WiFi routers and sells eSIMs you can pick up at the airport or have delivered to your hotel — a solid backup or alternative to a regular eSIM. Use the code below for a discount on your order.',
+    },
+    klook: {
+      tagline: 'Tours, activities & transport passes',
+      description: 'Klook lets you book tours, attraction tickets, airport transfers and transport passes across Japan in advance, often cheaper than buying on the spot. Use the code below for a discount on your booking.',
+    },
+    getyourguide: {
+      tagline: 'Tours & activities',
+      description: 'GetYourGuide offers bookable tours, day trips and skip-the-line tickets for popular attractions across Japan. Use the code below for a discount on your first booking.',
     },
   },
   sections: {

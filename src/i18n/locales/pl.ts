@@ -4,7 +4,7 @@ export const pl: Dictionary = {
   meta: {
     title: 'Kody promocyjne na taxi i eSIM — Polska i Japonia',
     description:
-      'Zaoszczędź w Polsce i Japonii: sprawdzone kody promocyjne do Bolt i FREENOW, pakiety eSIM Yesim, a także bonusy do NordVPN, Revolut, Wise, Wolt, Glovo i innych. Aktualizowane na bieżąco.',
+      'Zaoszczędź w Polsce i Japonii: sprawdzone kody promocyjne do Bolt i FREENOW, pakiety eSIM Yesim, a także bonusy do Uber, Revolut, Wise, Wolt, Glovo i innych. Aktualizowane na bieżąco.',
   },
   hero: {
     title: 'Pomiń drogą taksówkę z lotniska',
@@ -63,11 +63,6 @@ export const pl: Dictionary = {
       description:
         'GO to najpopularniejsza aplikacja do zamawiania taksówek w Japonii, działająca w Tokio, Osace, Kioto i większości dużych miast. Łączy Cię z licencjonowanymi taksówkami w oficjalnych cenach taryfowych, z płatnością bezgotówkową w aplikacji.',
     },
-    nordvpn: {
-      tagline: 'VPN do bezpiecznych podróży',
-      description:
-        'NordVPN szyfruje Twoje połączenie, dzięki czemu możesz bezpiecznie korzystać z publicznego Wi-Fi na lotniskach, w hotelach i kawiarniach oraz mieć dostęp do treści z kraju za granicą. Skorzystaj z poniższego kodu, aby otrzymać zniżkę na subskrypcję.',
-    },
     revolut: {
       tagline: 'Karta wielowalutowa',
       description:
@@ -107,6 +102,18 @@ export const pl: Dictionary = {
       tagline: 'Hulajnogi i rowery elektryczne',
       description:
         'Hulajnogi i rowery elektryczne Lime to szybki sposób na poruszanie się po miastach w Polsce i nie tylko. Użyj poniższego kodu, aby otrzymać darmowe minuty przejazdu.',
+    },
+    japanwireless: {
+      tagline: 'Pocket WiFi i eSIM do Japonii',
+      description: 'Japan Wireless wynajmuje routery pocket WiFi i sprzedaje karty eSIM, które odbierzesz na lotnisku lub dostaniesz do hotelu — dobra alternatywa lub zapasowe rozwiązanie dla zwykłego eSIM-a. Użyj kodu poniżej, aby uzyskać zniżkę na zamówienie.',
+    },
+    klook: {
+      tagline: 'Wycieczki, atrakcje i bilety transportowe',
+      description: 'Klook pozwala wcześniej zarezerwować wycieczki, bilety do atrakcji, transfery z lotniska i bilety transportowe w Japonii, często taniej niż na miejscu. Użyj kodu poniżej, aby uzyskać zniżkę na rezerwację.',
+    },
+    getyourguide: {
+      tagline: 'Wycieczki i atrakcje',
+      description: 'GetYourGuide oferuje wycieczki, jednodniowe wyjazdy i bilety bez kolejki do popularnych atrakcji w Japonii. Użyj kodu poniżej, aby uzyskać zniżkę na pierwszą rezerwację.',
     },
   },
   sections: {

@@ -4,7 +4,7 @@ export const ko: Dictionary = {
   meta: {
     title: '폴란드·일본 택시 할인 코드 & eSIM 할인 정보',
     description:
-      '폴란드와 일본에서 절약하세요: Bolt와 FREENOW 할인 코드, 저렴한 Yesim eSIM 요금제, 그리고 NordVPN, Revolut, Wise, Wolt, Glovo 등의 보너스 코드를 확인하세요. 정기적으로 업데이트됩니다.',
+      '폴란드와 일본에서 절약하세요: Bolt와 FREENOW 할인 코드, 저렴한 Yesim eSIM 요금제, 그리고 Uber, Revolut, Wise, Wolt, Glovo 등의 보너스 코드를 확인하세요. 정기적으로 업데이트됩니다.',
   },
   hero: {
     title: '비싼 공항 택시는 그만',
@@ -63,11 +63,6 @@ export const ko: Dictionary = {
       description:
         'GO는 일본에서 가장 많이 사용되는 택시 호출 앱으로 도쿄, 오사카, 교토 등 주요 도시를 대부분 커버합니다. 정식 면허 택시를 공식 미터 요금으로 호출하고 앱 내에서 비현금 결제가 가능합니다.',
     },
-    nordvpn: {
-      tagline: '안전한 여행을 위한 VPN',
-      description:
-        'NordVPN은 연결을 암호화하여 공항, 호텔, 카페의 공용 와이파이를 안전하게 사용하고 해외에서도 본국 콘텐츠에 접속할 수 있게 해줍니다. 아래 코드를 사용하면 구독료 할인을 받을 수 있습니다.',
-    },
     revolut: {
       tagline: '다중 통화 카드',
       description:
@@ -107,6 +102,18 @@ export const ko: Dictionary = {
       tagline: '전동 킥보드 & 전기자전거',
       description:
         'Lime 전동 킥보드와 전기자전거는 폴란드를 비롯한 여러 도시에서 빠르게 이동할 수 있는 수단입니다. 아래 코드를 사용하면 무료 이용 크레딧을 받을 수 있습니다.',
+    },
+    japanwireless: {
+      tagline: '일본용 포켓 와이파이 & eSIM',
+      description: 'Japan Wireless는 공항에서 수령하거나 호텔로 배송받을 수 있는 포켓 와이파이 라우터 대여와 eSIM 판매 서비스를 제공합니다. 일반 eSIM의 좋은 대안이나 백업으로 활용할 수 있습니다. 아래 코드를 사용하면 주문 시 할인을 받을 수 있습니다.',
+    },
+    klook: {
+      tagline: '투어, 액티비티 및 교통 패스',
+      description: 'Klook을 이용하면 일본 전역의 투어, 관광지 티켓, 공항 셔틀, 교통 패스를 미리 예약할 수 있으며, 현지 구매보다 저렴한 경우가 많습니다. 아래 코드를 사용하면 예약 시 할인을 받을 수 있습니다.',
+    },
+    getyourguide: {
+      tagline: '투어 및 액티비티',
+      description: 'GetYourGuide는 일본 전역의 인기 명소를 위한 투어, 당일 여행, 줄 서지 않고 입장할 수 있는 티켓을 제공합니다. 아래 코드를 사용하면 첫 예약 시 할인을 받을 수 있습니다.',
     },
   },
   sections: {

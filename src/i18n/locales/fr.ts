@@ -4,7 +4,7 @@ export const fr: Dictionary = {
   meta: {
     title: 'Codes promo taxi & eSIM pour la Pologne et le Japon',
     description:
-      "Économisez en Pologne et au Japon : codes promo vérifiés pour Bolt et FREENOW, forfaits eSIM Yesim, ainsi que des codes bonus pour NordVPN, Revolut, Wise, Wolt, Glovo et plus encore. Mis à jour régulièrement.",
+      "Économisez en Pologne et au Japon : codes promo vérifiés pour Bolt et FREENOW, forfaits eSIM Yesim, ainsi que des codes bonus pour Uber, Revolut, Wise, Wolt, Glovo et plus encore. Mis à jour régulièrement.",
   },
   hero: {
     title: "Évitez le taxi hors de prix de l'aéroport",
@@ -63,11 +63,6 @@ export const fr: Dictionary = {
       description:
         "GO est l'application de réservation de taxi la plus utilisée au Japon, couvrant Tokyo, Osaka, Kyoto et la plupart des grandes villes. Elle vous met en relation avec des taxis agréés aux tarifs officiels au compteur, avec un paiement sans espèces dans l'application.",
     },
-    nordvpn: {
-      tagline: 'VPN pour voyager en sécurité',
-      description:
-        "NordVPN chiffre votre connexion afin que vous puissiez utiliser le Wi-Fi public des aéroports, hôtels et cafés en toute sécurité, et accéder à vos contenus habituels depuis l'étranger. Utilisez le code ci-dessous pour obtenir une réduction sur un abonnement.",
-    },
     revolut: {
       tagline: 'Carte multidevises',
       description:
@@ -107,6 +102,18 @@ export const fr: Dictionary = {
       tagline: 'Trottinettes et vélos électriques',
       description:
         "Les trottinettes et vélos électriques Lime sont un moyen rapide de se déplacer en ville en Pologne et ailleurs. Utilisez le code ci-dessous pour obtenir du crédit de trajet gratuit.",
+    },
+    japanwireless: {
+      tagline: 'Pocket WiFi et eSIM pour le Japon',
+      description: 'Japan Wireless loue des routeurs Pocket WiFi et vend des eSIM à récupérer à l\'aéroport ou à faire livrer à votre hôtel — une bonne alternative ou solution de secours à une eSIM classique. Utilisez le code ci-dessous pour une réduction sur votre commande.',
+    },
+    klook: {
+      tagline: 'Visites, activités et pass de transport',
+      description: 'Klook permet de réserver à l\'avance des visites, billets d\'attractions, transferts aéroport et pass de transport dans tout le Japon, souvent moins chers que sur place. Utilisez le code ci-dessous pour une réduction sur votre réservation.',
+    },
+    getyourguide: {
+      tagline: 'Visites et activités',
+      description: 'GetYourGuide propose des visites, excursions à la journée et billets coupe-file pour les attractions populaires du Japon. Utilisez le code ci-dessous pour une réduction sur votre première réservation.',
     },
   },
   sections: {

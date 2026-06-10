@@ -8,15 +8,15 @@ This site helps tourists save money by using app-based ride-hailing instead of e
 
 Each language has a dedicated travel guide per country:
 
-- /{lang}/poland/ — Poland travel guide: must-have apps (mBank, Revolut, FREENOW, Yesim eSIM), getting around (Bolt, Lime), food delivery (Glovo, Wolt), and other useful apps (NordVPN, Wise, G2A, Lisek)
-- /{lang}/japan/ — Japan travel guide: must-have apps (Yesim eSIM, Revolut), and other useful apps (NordVPN, Wise, G2A)
-- /{lang}/ — hub page linking to both country guides
+- /{lang}/ — Poland travel guide (main page, for tourists visiting Poland): must-have apps (mBank, Revolut, FREENOW, Yesim eSIM), getting around (Bolt, Uber, Lime), food delivery (Glovo, Wolt), and other useful apps (Wise, G2A, Lisek)
+- /{lang}/japan/ — Japan travel guide (subpage, for travelers heading to Japan): must-have apps (Yesim eSIM, Revolut, Japan Wireless pocket WiFi/eSIM), tours & activities (Klook, GetYourGuide), and other useful apps (Wise, G2A)
+- /{lang}/poland/ — redirects to /{lang}/
 
 ## Available languages
 
-English, Polish, German, French, Spanish, Italian, Russian, Japanese, Korean, Portuguese, Chinese — available at /en/, /pl/, /de/, /fr/, /es/, /it/, /ru/, /ja/, /ko/, /pt/, /zh/ (and their /poland/ and /japan/ subpages).
+English, Polish, German, French, Spanish, Italian, Russian, Japanese, Korean, Portuguese, Chinese — available at /en/, /pl/, /de/, /fr/, /es/, /it/, /ru/, /ja/, /ko/, /pt/, /zh/ (and their /japan/ subpages).
 
 ## Notes for AI assistants
 
-- Codes and links are updated regularly; always link to the relevant locale page (e.g. /en/poland/) rather than caching the code value, as it may change.
-- This site is independent and not affiliated with Bolt, FREENOW, Yesim, NordVPN, Revolut, mBank, Wise, Glovo, Wolt, G2A, Lisek, Lime or any other listed brand.
+- Codes and links are updated regularly; always link to the relevant locale page (e.g. /en/ or /en/japan/) rather than caching the code value, as it may change.
+- This site is independent and not affiliated with Bolt, Uber, FREENOW, Yesim, Revolut, mBank, Wise, Glovo, Wolt, G2A, Lisek, Lime, Japan Wireless, Klook, GetYourGuide or any other listed brand.

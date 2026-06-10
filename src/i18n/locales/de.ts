@@ -4,7 +4,7 @@ export const de: Dictionary = {
   meta: {
     title: 'Taxi-Gutscheincodes & eSIM-Rabatte für Polen & Japan',
     description:
-      'Spare Geld in Polen und Japan: geprüfte Gutscheincodes für Bolt und FREENOW, Yesim-eSIM-Datentarife, sowie Bonuscodes für NordVPN, Revolut, Wise, Wolt, Glovo und mehr. Regelmäßig aktualisiert.',
+      'Spare Geld in Polen und Japan: geprüfte Gutscheincodes für Bolt und FREENOW, Yesim-eSIM-Datentarife, sowie Bonuscodes für Uber, Revolut, Wise, Wolt, Glovo und mehr. Regelmäßig aktualisiert.',
   },
   hero: {
     title: 'Spar dir das teure Flughafentaxi',
@@ -63,11 +63,6 @@ export const de: Dictionary = {
       description:
         'GO ist die meistgenutzte Taxi-App in Japan und deckt Tokio, Osaka, Kyoto und die meisten Großstädte ab. Sie verbindet dich mit lizenzierten Taxis zu offiziellen Tarifpreisen, mit bargeldloser Zahlung in der App.',
     },
-    nordvpn: {
-      tagline: 'VPN für sicheres Reisen',
-      description:
-        'NordVPN verschlüsselt deine Verbindung, sodass du öffentliches WLAN an Flughäfen, Hotels und Cafés sicher nutzen und auch im Ausland auf Inhalte aus deinem Heimatland zugreifen kannst. Nutze den Code unten für einen Rabatt auf ein Abo.',
-    },
     revolut: {
       tagline: 'Multiwährungskarte',
       description:
@@ -107,6 +102,18 @@ export const de: Dictionary = {
       tagline: 'E-Scooter & E-Bikes',
       description:
         'Lime E-Scooter und E-Bikes sind eine schnelle Möglichkeit, dich in Städten in Polen und darüber hinaus fortzubewegen. Nutze den Code unten für kostenloses Fahrguthaben.',
+    },
+    japanwireless: {
+      tagline: 'Pocket-WLAN & eSIM für Japan',
+      description: 'Japan Wireless verleiht Pocket-WLAN-Router und verkauft eSIMs, die du am Flughafen abholen oder ins Hotel liefern lassen kannst — eine gute Alternative oder Backup zu einer normalen eSIM. Nutze den Code unten für einen Rabatt auf deine Bestellung.',
+    },
+    klook: {
+      tagline: 'Touren, Aktivitäten & Transport-Tickets',
+      description: 'Mit Klook kannst du Touren, Eintrittskarten, Flughafentransfers und Transport-Tickets in ganz Japan im Voraus buchen — oft günstiger als vor Ort. Nutze den Code unten für einen Rabatt auf deine Buchung.',
+    },
+    getyourguide: {
+      tagline: 'Touren & Aktivitäten',
+      description: 'GetYourGuide bietet buchbare Touren, Tagesausflüge und Tickets ohne Anstehen für beliebte Attraktionen in ganz Japan. Nutze den Code unten für einen Rabatt auf deine erste Buchung.',
     },
   },
   sections: {

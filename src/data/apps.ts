@@ -1,6 +1,6 @@
 export type Country = 'PL' | 'JP';
 export type Section = 'mustHave' | 'food' | 'travel' | 'other';
-export type Category = 'taxi' | 'esim' | 'finance' | 'food' | 'mobility' | 'security' | 'shopping';
+export type Category = 'taxi' | 'esim' | 'finance' | 'food' | 'mobility' | 'security' | 'shopping' | 'activities';
 
 export interface AppDef {
   /** Stable identifier, also used as the Redis key suffix */
@@ -35,6 +35,17 @@ export const apps: AppDef[] = [
     i18nKey: 'bolt',
   },
   {
+    id: 'uber',
+    countries: ['PL'],
+    section: 'travel',
+    category: 'taxi',
+    name: 'Uber',
+    color: '#000000',
+    defaultCode: 'WELCOME',
+    defaultUrl: 'https://www.uber.com/pl/en/',
+    i18nKey: 'uber',
+  },
+  {
     id: 'freenow',
     countries: ['PL'],
     section: 'mustHave',
@@ -66,17 +77,6 @@ export const apps: AppDef[] = [
     defaultCode: 'WELCOME',
     defaultUrl: 'https://yesim.app/',
     i18nKey: 'yesim',
-  },
-  {
-    id: 'nordvpn',
-    countries: ['PL', 'JP'],
-    section: 'other',
-    category: 'security',
-    name: 'NordVPN',
-    color: '#4687FF',
-    defaultCode: 'WELCOME',
-    defaultUrl: 'https://nordvpn.com/',
-    i18nKey: 'nordvpn',
   },
   {
     id: 'revolut',
@@ -165,6 +165,39 @@ export const apps: AppDef[] = [
     defaultCode: 'WELCOME',
     defaultUrl: 'https://www.li.me/',
     i18nKey: 'lime',
+  },
+  {
+    id: 'japanwireless',
+    countries: ['JP'],
+    section: 'mustHave',
+    category: 'esim',
+    name: 'Japan Wireless',
+    color: '#00A0E9',
+    defaultCode: 'WELCOME',
+    defaultUrl: 'https://www.japan-wireless.com/',
+    i18nKey: 'japanwireless',
+  },
+  {
+    id: 'klook',
+    countries: ['JP'],
+    section: 'travel',
+    category: 'activities',
+    name: 'Klook',
+    color: '#FF5722',
+    defaultCode: 'WELCOME',
+    defaultUrl: 'https://www.klook.com/',
+    i18nKey: 'klook',
+  },
+  {
+    id: 'getyourguide',
+    countries: ['JP'],
+    section: 'travel',
+    category: 'activities',
+    name: 'GetYourGuide',
+    color: '#FF5533',
+    defaultCode: 'WELCOME',
+    defaultUrl: 'https://www.getyourguide.com/',
+    i18nKey: 'getyourguide',
   },
 ];
 
