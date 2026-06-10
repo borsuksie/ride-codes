@@ -4,7 +4,7 @@ export const en: Dictionary = {
   meta: {
     title: 'Taxi Promo Codes & eSIM Discounts for Poland & Japan',
     description:
-      'Save money in Poland and Japan: verified promo codes for Bolt, Uber, FREENOW and GO taxi apps, plus cheap Yesim eSIM data plans. Updated regularly.',
+      'Save money in Poland and Japan: verified promo codes for Bolt and FREENOW ride-hailing apps, Yesim eSIM data plans, plus bonus codes for NordVPN, Revolut, Wise, Wolt, Glovo and more. Updated regularly.',
   },
   hero: {
     title: 'Skip the expensive airport taxi',
@@ -14,7 +14,7 @@ export const en: Dictionary = {
   intro: {
     taxiHeading: 'Why use a ride-hailing app instead of a taxi?',
     taxiText:
-      "In most cities, official taxi corporations charge significantly more than app-based rides, especially from airports and train stations. Apps like Bolt, Uber and FREENOW in Poland, or GO in Japan, show the price upfront, accept card payments, and are usually much cheaper than hailing a cab on the street. Use one of the codes below for an extra discount on your first rides.",
+      "In most cities, official taxi corporations charge significantly more than app-based rides, especially from airports and train stations. Apps like Bolt and FREENOW in Poland show the price upfront, accept card payments, and are usually much cheaper than hailing a cab on the street. Use one of the codes below for an extra discount on your first rides.",
     esimHeading: 'Why get an eSIM instead of a physical SIM card?',
     esimText:
       'An eSIM activates in minutes and works the moment you land — usually cheaper than airport SIM kiosks or roaming fees from your home carrier. Yesim plans for Poland and Japan can be bought online before your trip and activated with a QR code, no queues and no plastic SIM card to lose.',
@@ -63,6 +63,55 @@ export const en: Dictionary = {
       description:
         'GO is the most widely used taxi-hailing app in Japan, covering Tokyo, Osaka, Kyoto and most major cities. It connects you with licensed taxis at official metered prices, with cashless in-app payment.',
     },
+    nordvpn: {
+      tagline: 'VPN for safe travel',
+      description:
+        'NordVPN encrypts your connection so you can safely use public Wi-Fi at airports, hotels and cafes, and access your home content while abroad. Use the code below for a discount on a subscription.',
+    },
+    revolut: {
+      tagline: 'Multi-currency travel card',
+      description:
+        'Revolut lets you hold and spend in multiple currencies at the real exchange rate, helping you avoid costly foreign transaction fees while traveling. Use the code below when you sign up.',
+    },
+    mbank: {
+      tagline: 'Polish bank account',
+      description:
+        "mBank offers a free Polish bank account and debit card that's easy to open online — handy if you're staying in Poland for a longer period. Use the code below when you register.",
+    },
+    wise: {
+      tagline: 'Cheap international transfers',
+      description:
+        'Wise gives you an account and debit card for spending and transferring money abroad at the real exchange rate, with no hidden markups. Use the code below when you sign up.',
+    },
+    glovo: {
+      tagline: 'Food & grocery delivery',
+      description:
+        'Glovo delivers food, groceries and other essentials straight to your door in major cities. Use the code below for a discount on your first order.',
+    },
+    g2a: {
+      tagline: 'Digital marketplace',
+      description:
+        'G2A is a marketplace for game keys, gift cards and software at discounted prices — handy for entertainment during your trip. Use the code below for a discount on your purchase.',
+    },
+    wolt: {
+      tagline: 'Food delivery app',
+      description:
+        'Wolt delivers food and groceries from local restaurants and shops, widely available across Polish cities. Use the code below for a discount on your first order.',
+    },
+    lisek: {
+      tagline: 'Buy now, pay later',
+      description:
+        'Lisek lets you split purchases into instalments at participating Polish shops. Use the code below for a bonus on your first purchase.',
+    },
+    lime: {
+      tagline: 'E-scooters & e-bikes',
+      description:
+        'Lime e-scooters and e-bikes are a fast way to get around cities in Poland and beyond. Use the code below for free ride credit.',
+    },
+  },
+  extras: {
+    heading: 'Other useful apps for your trip',
+    intro: 'Extra discount codes for finance, delivery and mobility apps that make traveling easier.',
   },
   faq: {
     heading: 'Frequently asked questions',
@@ -87,7 +136,7 @@ export const en: Dictionary = {
   },
   footer: {
     disclaimer:
-      'We are not affiliated with Bolt, Uber, FREENOW, GO or Yesim. Promo codes and offers are provided by these companies and may change or expire without notice.',
+      'We are not affiliated with Bolt, FREENOW, Yesim or any other brand listed on this site. Promo codes and offers are provided by these companies and may change or expire without notice.',
     rights: 'All rights reserved.',
   },
   nav: {

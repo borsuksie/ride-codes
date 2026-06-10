@@ -38,6 +38,19 @@ export interface Dictionary {
     yesim: AppCopy;
     yesimJp: AppCopy;
     go: AppCopy;
+    nordvpn: AppCopy;
+    revolut: AppCopy;
+    mbank: AppCopy;
+    wise: AppCopy;
+    glovo: AppCopy;
+    g2a: AppCopy;
+    wolt: AppCopy;
+    lisek: AppCopy;
+    lime: AppCopy;
+  };
+  extras: {
+    heading: string;
+    intro: string;
   };
   faq: {
     heading: string;

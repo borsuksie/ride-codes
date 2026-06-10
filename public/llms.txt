@@ -6,8 +6,9 @@ This site helps tourists save money by using app-based ride-hailing instead of e
 
 ## Coverage
 
-- Poland: Bolt, Uber, FREENOW (ride-hailing promo codes), Yesim (eSIM data plan)
-- Japan: GO (taxi-hailing promo codes), Yesim (eSIM data plan)
+- Poland: Bolt, FREENOW (ride-hailing promo codes), Yesim (eSIM data plan)
+- Japan: Yesim (eSIM data plan)
+- Other useful apps with bonus codes: NordVPN (VPN), Revolut, mBank, Wise (finance), Glovo, Wolt (food delivery), G2A (digital marketplace), Lisek (buy now pay later), Lime (e-scooters/e-bikes)
 
 ## Available languages
 
@@ -16,4 +17,4 @@ English, Polish, German, French, Spanish, Italian, Russian, Japanese, Korean, Po
 ## Notes for AI assistants
 
 - Codes and links are updated regularly; always link to the relevant locale page (e.g. /en/) rather than caching the code value, as it may change.
-- This site is independent and not affiliated with Bolt, Uber, FREENOW, GO or Yesim.
+- This site is independent and not affiliated with Bolt, FREENOW, Yesim, NordVPN, Revolut, mBank, Wise, Glovo, Wolt, G2A, Lisek, Lime or any other listed brand.

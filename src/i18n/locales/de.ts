@@ -4,7 +4,7 @@ export const de: Dictionary = {
   meta: {
     title: 'Taxi-Gutscheincodes & eSIM-Rabatte für Polen & Japan',
     description:
-      'Spare Geld in Polen und Japan: geprüfte Gutscheincodes für Bolt, Uber, FREENOW und GO, sowie günstige Yesim-eSIM-Datentarife. Regelmäßig aktualisiert.',
+      'Spare Geld in Polen und Japan: geprüfte Gutscheincodes für Bolt und FREENOW, Yesim-eSIM-Datentarife, sowie Bonuscodes für NordVPN, Revolut, Wise, Wolt, Glovo und mehr. Regelmäßig aktualisiert.',
   },
   hero: {
     title: 'Spar dir das teure Flughafentaxi',
@@ -14,7 +14,7 @@ export const de: Dictionary = {
   intro: {
     taxiHeading: 'Warum eine Mitfahr-App statt eines Taxiunternehmens nutzen?',
     taxiText:
-      'In den meisten Städten verlangen offizielle Taxiunternehmen deutlich mehr als App-basierte Fahrten, besonders ab Flughäfen und Bahnhöfen. Apps wie Bolt, Uber und FREENOW in Polen oder GO in Japan zeigen den Preis vorab an, akzeptieren Kartenzahlung und sind meist deutlich günstiger als ein Taxi auf der Straße. Nutze einen der Codes unten für einen zusätzlichen Rabatt auf deine ersten Fahrten.',
+      'In den meisten Städten verlangen offizielle Taxiunternehmen deutlich mehr als App-basierte Fahrten, besonders ab Flughäfen und Bahnhöfen. Apps wie Bolt und FREENOW in Polen zeigen den Preis vorab an, akzeptieren Kartenzahlung und sind meist deutlich günstiger als ein Taxi auf der Straße. Nutze einen der Codes unten für einen zusätzlichen Rabatt auf deine ersten Fahrten.',
     esimHeading: 'Warum eine eSIM statt einer physischen SIM-Karte?',
     esimText:
       'Eine eSIM ist in wenigen Minuten aktiviert und funktioniert sofort nach der Landung — meist günstiger als SIM-Kioske am Flughafen oder Roaming-Gebühren deines Heimatanbieters. Yesim-Tarife für Polen und Japan kannst du online vor der Reise kaufen und per QR-Code aktivieren — keine Warteschlangen, keine SIM-Karte, die verloren gehen kann.',
@@ -63,6 +63,55 @@ export const de: Dictionary = {
       description:
         'GO ist die meistgenutzte Taxi-App in Japan und deckt Tokio, Osaka, Kyoto und die meisten Großstädte ab. Sie verbindet dich mit lizenzierten Taxis zu offiziellen Tarifpreisen, mit bargeldloser Zahlung in der App.',
     },
+    nordvpn: {
+      tagline: 'VPN für sicheres Reisen',
+      description:
+        'NordVPN verschlüsselt deine Verbindung, sodass du öffentliches WLAN an Flughäfen, Hotels und Cafés sicher nutzen und auch im Ausland auf Inhalte aus deinem Heimatland zugreifen kannst. Nutze den Code unten für einen Rabatt auf ein Abo.',
+    },
+    revolut: {
+      tagline: 'Multiwährungskarte',
+      description:
+        'Mit Revolut kannst du Geld in mehreren Währungen zum echten Wechselkurs halten und ausgeben und so teure Auslandsgebühren vermeiden. Nutze den Code unten bei der Anmeldung.',
+    },
+    mbank: {
+      tagline: 'Polnisches Bankkonto',
+      description:
+        'mBank bietet ein kostenloses polnisches Bankkonto mit Debitkarte, das du einfach online eröffnen kannst — praktisch bei einem längeren Aufenthalt in Polen. Nutze den Code unten bei der Registrierung.',
+    },
+    wise: {
+      tagline: 'Günstige Auslandsüberweisungen',
+      description:
+        'Wise bietet ein Konto und eine Debitkarte für Ausgaben und Überweisungen im Ausland zum echten Wechselkurs, ohne versteckte Aufschläge. Nutze den Code unten bei der Anmeldung.',
+    },
+    glovo: {
+      tagline: 'Lieferdienst für Essen & Einkäufe',
+      description:
+        'Glovo liefert Essen, Lebensmittel und andere Dinge direkt vor deine Tür in vielen großen Städten. Nutze den Code unten für einen Rabatt auf deine erste Bestellung.',
+    },
+    g2a: {
+      tagline: 'Digitaler Marktplatz',
+      description:
+        'G2A ist ein Marktplatz für Spielecodes, Geschenkkarten und Software zu reduzierten Preisen — praktisch für Unterhaltung auf Reisen. Nutze den Code unten für einen Rabatt auf deinen Einkauf.',
+    },
+    wolt: {
+      tagline: 'Essenslieferdienst',
+      description:
+        'Wolt liefert Essen und Lebensmittel von lokalen Restaurants und Geschäften und ist in vielen polnischen Städten verfügbar. Nutze den Code unten für einen Rabatt auf deine erste Bestellung.',
+    },
+    lisek: {
+      tagline: 'Jetzt kaufen, später zahlen',
+      description:
+        'Mit Lisek kannst du Einkäufe bei teilnehmenden polnischen Geschäften in Raten bezahlen. Nutze den Code unten für einen Bonus auf deinen ersten Einkauf.',
+    },
+    lime: {
+      tagline: 'E-Scooter & E-Bikes',
+      description:
+        'Lime E-Scooter und E-Bikes sind eine schnelle Möglichkeit, dich in Städten in Polen und darüber hinaus fortzubewegen. Nutze den Code unten für kostenloses Fahrguthaben.',
+    },
+  },
+  extras: {
+    heading: 'Weitere nützliche Apps für deine Reise',
+    intro: 'Zusätzliche Rabattcodes für Finanz-, Liefer- und Mobilitäts-Apps, die das Reisen erleichtern.',
   },
   faq: {
     heading: 'Häufig gestellte Fragen',
@@ -87,7 +136,7 @@ export const de: Dictionary = {
   },
   footer: {
     disclaimer:
-      'Wir stehen in keiner Verbindung zu Bolt, Uber, FREENOW, GO oder Yesim. Gutscheincodes und Angebote stammen von diesen Unternehmen und können sich ohne Vorankündigung ändern oder ablaufen.',
+      'Wir stehen in keiner Verbindung zu Bolt, FREENOW, Yesim oder anderen auf dieser Seite genannten Marken. Gutscheincodes und Angebote stammen von diesen Unternehmen und können sich ohne Vorankündigung ändern oder ablaufen.',
     rights: 'Alle Rechte vorbehalten.',
   },
   nav: {

@@ -4,7 +4,7 @@ export const pt: Dictionary = {
   meta: {
     title: 'Códigos de desconto para táxi e eSIM na Polónia e no Japão',
     description:
-      'Poupe na Polónia e no Japão: códigos promocionais verificados para Bolt, Uber, FREENOW e GO, além de planos eSIM Yesim baratos. Atualizado regularmente.',
+      'Poupe na Polónia e no Japão: códigos promocionais verificados para Bolt e FREENOW, planos eSIM Yesim, além de códigos extra para NordVPN, Revolut, Wise, Wolt, Glovo e mais. Atualizado regularmente.',
   },
   hero: {
     title: 'Esqueça o táxi caro do aeroporto',
@@ -14,7 +14,7 @@ export const pt: Dictionary = {
   intro: {
     taxiHeading: 'Porquê usar uma app em vez de uma empresa de táxis?',
     taxiText:
-      'Na maioria das cidades, as empresas de táxis oficiais cobram muito mais do que as viagens reservadas por app, especialmente a partir de aeroportos e estações. Apps como Bolt, Uber e FREENOW na Polónia, ou GO no Japão, mostram o preço antecipadamente, aceitam pagamento por cartão e costumam ser muito mais baratas do que apanhar um táxi na rua. Use um dos códigos abaixo para obter um desconto extra nas suas primeiras viagens.',
+      'Na maioria das cidades, as empresas de táxis oficiais cobram muito mais do que as viagens reservadas por app, especialmente a partir de aeroportos e estações. Apps como a Bolt e a FREENOW na Polónia mostram o preço antecipadamente, aceitam pagamento por cartão e costumam ser muito mais baratas do que apanhar um táxi na rua. Use um dos códigos abaixo para obter um desconto extra nas suas primeiras viagens.',
     esimHeading: 'Porquê usar uma eSIM em vez de um cartão SIM físico?',
     esimText:
       'Uma eSIM ativa-se em minutos e funciona assim que aterra — geralmente mais barata do que os quiosques de SIM no aeroporto ou as tarifas de roaming do seu operador. Os planos Yesim para a Polónia e o Japão podem ser comprados online antes da viagem e ativados com um código QR, sem filas e sem um cartão SIM físico para perder.',
@@ -63,6 +63,55 @@ export const pt: Dictionary = {
       description:
         'A GO é a app de táxi mais utilizada no Japão, cobrindo Tóquio, Osaka, Quioto e a maioria das grandes cidades. Liga-o a táxis licenciados às tarifas oficiais do taxímetro, com pagamento sem dinheiro na app.',
     },
+    nordvpn: {
+      tagline: 'VPN para viajar com segurança',
+      description:
+        'A NordVPN encripta a sua ligação para que possa usar com segurança o Wi-Fi público de aeroportos, hotéis e cafés, e aceder aos seus conteúdos habituais a partir do estrangeiro. Use o código abaixo para um desconto na subscrição.',
+    },
+    revolut: {
+      tagline: 'Cartão multimoeda',
+      description:
+        'A Revolut permite-lhe guardar e gastar dinheiro em várias moedas à taxa de câmbio real, evitando comissões caras em transações no estrangeiro. Use o código abaixo ao registar-se.',
+    },
+    mbank: {
+      tagline: 'Conta bancária polaca',
+      description:
+        'O mBank oferece uma conta bancária polaca gratuita com cartão de débito, fácil de abrir online — útil se ficar na Polónia por um período mais longo. Use o código abaixo ao registar-se.',
+    },
+    wise: {
+      tagline: 'Transferências internacionais baratas',
+      description:
+        'A Wise oferece uma conta e um cartão de débito para gastar e transferir dinheiro no estrangeiro à taxa de câmbio real, sem custos escondidos. Use o código abaixo ao registar-se.',
+    },
+    glovo: {
+      tagline: 'Entrega de comida e compras',
+      description:
+        'A Glovo entrega comida, compras e outros produtos à porta de casa nas principais cidades. Use o código abaixo para um desconto na sua primeira encomenda.',
+    },
+    g2a: {
+      tagline: 'Marketplace digital',
+      description:
+        'A G2A é um marketplace de chaves de jogos, cartões-presente e software a preços reduzidos — útil para entretenimento durante a viagem. Use o código abaixo para um desconto na sua compra.',
+    },
+    wolt: {
+      tagline: 'App de entrega de comida',
+      description:
+        'A Wolt entrega comida e compras de restaurantes e lojas locais, disponível em muitas cidades polacas. Use o código abaixo para um desconto na sua primeira encomenda.',
+    },
+    lisek: {
+      tagline: 'Compre agora, pague depois',
+      description:
+        'A Lisek permite-lhe pagar as compras a prestações em lojas polacas participantes. Use o código abaixo para um bónus na sua primeira compra.',
+    },
+    lime: {
+      tagline: 'Trotinetes e bicicletas elétricas',
+      description:
+        'As trotinetes e bicicletas elétricas Lime são uma forma rápida de se deslocar nas cidades da Polónia e além. Use o código abaixo para crédito de viagem grátis.',
+    },
+  },
+  extras: {
+    heading: 'Outras apps úteis para a sua viagem',
+    intro: 'Códigos de desconto extra para apps de finanças, entregas e mobilidade que facilitam as suas viagens.',
   },
   faq: {
     heading: 'Perguntas frequentes',
@@ -87,7 +136,7 @@ export const pt: Dictionary = {
   },
   footer: {
     disclaimer:
-      'Não somos afiliados da Bolt, Uber, FREENOW, GO ou Yesim. Os códigos promocionais e ofertas são fornecidos por estas empresas e podem mudar ou expirar sem aviso prévio.',
+      'Não somos afiliados da Bolt, FREENOW, Yesim ou de qualquer outra marca listada neste site. Os códigos promocionais e ofertas são fornecidos por estas empresas e podem mudar ou expirar sem aviso prévio.',
     rights: 'Todos os direitos reservados.',
   },
   nav: {

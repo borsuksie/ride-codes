@@ -4,7 +4,7 @@ export const fr: Dictionary = {
   meta: {
     title: 'Codes promo taxi & eSIM pour la Pologne et le Japon',
     description:
-      "Économisez en Pologne et au Japon : codes promo vérifiés pour Bolt, Uber, FREENOW et GO, ainsi que des forfaits eSIM Yesim pas chers. Mis à jour régulièrement.",
+      "Économisez en Pologne et au Japon : codes promo vérifiés pour Bolt et FREENOW, forfaits eSIM Yesim, ainsi que des codes bonus pour NordVPN, Revolut, Wise, Wolt, Glovo et plus encore. Mis à jour régulièrement.",
   },
   hero: {
     title: "Évitez le taxi hors de prix de l'aéroport",
@@ -14,7 +14,7 @@ export const fr: Dictionary = {
   intro: {
     taxiHeading: "Pourquoi utiliser une application plutôt qu'une compagnie de taxis ?",
     taxiText:
-      "Dans la plupart des villes, les compagnies de taxis officielles facturent bien plus cher que les courses réservées via une application, surtout depuis les aéroports et les gares. Des applications comme Bolt, Uber et FREENOW en Pologne, ou GO au Japon, affichent le prix à l'avance, acceptent le paiement par carte et sont généralement bien moins chères qu'un taxi hélé dans la rue. Utilisez l'un des codes ci-dessous pour obtenir une réduction supplémentaire sur vos premières courses.",
+      "Dans la plupart des villes, les compagnies de taxis officielles facturent bien plus cher que les courses réservées via une application, surtout depuis les aéroports et les gares. Des applications comme Bolt et FREENOW en Pologne affichent le prix à l'avance, acceptent le paiement par carte et sont généralement bien moins chères qu'un taxi hélé dans la rue. Utilisez l'un des codes ci-dessous pour obtenir une réduction supplémentaire sur vos premières courses.",
     esimHeading: "Pourquoi choisir une eSIM plutôt qu'une carte SIM physique ?",
     esimText:
       "Une eSIM s'active en quelques minutes et fonctionne dès l'atterrissage — généralement moins cher que les kiosques SIM de l'aéroport ou les frais d'itinérance de votre opérateur. Les forfaits Yesim pour la Pologne et le Japon peuvent être achetés en ligne avant le départ et activés via un QR code, sans file d'attente et sans carte SIM physique à perdre.",
@@ -63,6 +63,55 @@ export const fr: Dictionary = {
       description:
         "GO est l'application de réservation de taxi la plus utilisée au Japon, couvrant Tokyo, Osaka, Kyoto et la plupart des grandes villes. Elle vous met en relation avec des taxis agréés aux tarifs officiels au compteur, avec un paiement sans espèces dans l'application.",
     },
+    nordvpn: {
+      tagline: 'VPN pour voyager en sécurité',
+      description:
+        "NordVPN chiffre votre connexion afin que vous puissiez utiliser le Wi-Fi public des aéroports, hôtels et cafés en toute sécurité, et accéder à vos contenus habituels depuis l'étranger. Utilisez le code ci-dessous pour obtenir une réduction sur un abonnement.",
+    },
+    revolut: {
+      tagline: 'Carte multidevises',
+      description:
+        "Revolut vous permet de détenir et de dépenser de l'argent dans plusieurs devises au taux de change réel, évitant ainsi des frais de transaction à l'étranger coûteux. Utilisez le code ci-dessous lors de votre inscription.",
+    },
+    mbank: {
+      tagline: 'Compte bancaire polonais',
+      description:
+        "mBank propose un compte bancaire polonais gratuit avec carte de débit, facile à ouvrir en ligne — pratique si vous restez en Pologne plus longtemps. Utilisez le code ci-dessous lors de votre inscription.",
+    },
+    wise: {
+      tagline: 'Virements internationaux peu coûteux',
+      description:
+        "Wise propose un compte et une carte de débit pour dépenser et transférer de l'argent à l'étranger au taux de change réel, sans frais cachés. Utilisez le code ci-dessous lors de votre inscription.",
+    },
+    glovo: {
+      tagline: 'Livraison de repas et courses',
+      description:
+        "Glovo livre des repas, des courses et d'autres produits directement chez vous dans les grandes villes. Utilisez le code ci-dessous pour obtenir une réduction sur votre première commande.",
+    },
+    g2a: {
+      tagline: 'Marketplace numérique',
+      description:
+        "G2A est une marketplace de clés de jeux, cartes cadeaux et logiciels à prix réduits — pratique pour se divertir pendant le voyage. Utilisez le code ci-dessous pour obtenir une réduction sur votre achat.",
+    },
+    wolt: {
+      tagline: 'Application de livraison de repas',
+      description:
+        "Wolt livre des repas et des courses depuis des restaurants et commerces locaux, largement disponible dans les villes polonaises. Utilisez le code ci-dessous pour obtenir une réduction sur votre première commande.",
+    },
+    lisek: {
+      tagline: 'Achetez maintenant, payez plus tard',
+      description:
+        "Lisek vous permet de payer vos achats en plusieurs fois dans les magasins polonais partenaires. Utilisez le code ci-dessous pour obtenir un bonus sur votre premier achat.",
+    },
+    lime: {
+      tagline: 'Trottinettes et vélos électriques',
+      description:
+        "Les trottinettes et vélos électriques Lime sont un moyen rapide de se déplacer en ville en Pologne et ailleurs. Utilisez le code ci-dessous pour obtenir du crédit de trajet gratuit.",
+    },
+  },
+  extras: {
+    heading: 'Autres applications utiles pour votre voyage',
+    intro: "Codes de réduction supplémentaires pour des applications de finance, de livraison et de mobilité qui facilitent vos déplacements.",
   },
   faq: {
     heading: 'Questions fréquentes',
@@ -87,7 +136,7 @@ export const fr: Dictionary = {
   },
   footer: {
     disclaimer:
-      "Nous ne sommes affiliés ni à Bolt, ni à Uber, ni à FREENOW, ni à GO, ni à Yesim. Les codes promo et offres proviennent de ces entreprises et peuvent changer ou expirer sans préavis.",
+      "Nous ne sommes affiliés ni à Bolt, ni à FREENOW, ni à Yesim, ni à aucune autre marque mentionnée sur ce site. Les codes promo et offres proviennent de ces entreprises et peuvent changer ou expirer sans préavis.",
     rights: 'Tous droits réservés.',
   },
   nav: {

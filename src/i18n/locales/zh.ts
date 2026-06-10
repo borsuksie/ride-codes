@@ -4,7 +4,7 @@ export const zh: Dictionary = {
   meta: {
     title: '波兰、日本打车优惠码与eSIM折扣信息',
     description:
-      '在波兰和日本省钱攻略：Bolt、Uber、FREENOW、GO 优惠码，以及超值 Yesim eSIM 流量套餐，定期更新。',
+      '在波兰和日本省钱攻略：Bolt 和 FREENOW 优惠码、超值 Yesim eSIM 流量套餐，以及 NordVPN、Revolut、Wise、Wolt、Glovo 等更多奖励代码，定期更新。',
   },
   hero: {
     title: '告别昂贵的机场出租车',
@@ -14,7 +14,7 @@ export const zh: Dictionary = {
   intro: {
     taxiHeading: '为什么用打车软件而不是出租车公司？',
     taxiText:
-      '在大多数城市，正规出租车公司的收费远高于打车软件，尤其是从机场或火车站出发时。波兰的 Bolt、Uber、FREENOW，以及日本的 GO，都会提前显示价格、支持刷卡支付，通常比在路边拦出租车便宜得多。使用下方优惠码，首次乘车还能获得额外折扣。',
+      '在大多数城市，正规出租车公司的收费远高于打车软件，尤其是从机场或火车站出发时。波兰的 Bolt、FREENOW 等应用会提前显示价格、支持刷卡支付，通常比在路边拦出租车便宜得多。使用下方优惠码，首次乘车还能获得额外折扣。',
     esimHeading: '为什么选择eSIM而不是实体SIM卡？',
     esimText:
       'eSIM 几分钟即可激活，落地后立即可用，通常比机场SIM卡柜台或本国运营商的漫游费用便宜。波兰和日本的 Yesim 套餐可在出发前在线购买，通过扫描二维码激活，无需排队，也不用担心丢失实体SIM卡。',
@@ -63,6 +63,55 @@ export const zh: Dictionary = {
       description:
         'GO 是日本使用最广泛的出租车叫车应用，覆盖东京、大阪、京都等大多数主要城市。可按官方计价器价格预约持牌出租车，并支持应用内无现金支付。',
     },
+    nordvpn: {
+      tagline: '安全旅行VPN',
+      description:
+        'NordVPN 可加密你的网络连接，让你在机场、酒店和咖啡馆安全使用公共Wi-Fi，并在国外访问国内的内容。使用下方代码可享受订阅折扣。',
+    },
+    revolut: {
+      tagline: '多币种旅行卡',
+      description:
+        'Revolut 可让你以真实汇率持有和消费多种货币，避免昂贵的境外交易手续费。注册时使用下方代码。',
+    },
+    mbank: {
+      tagline: '波兰银行账户',
+      description:
+        'mBank 提供可在线轻松开设的免费波兰银行账户和借记卡，适合长期在波兰停留的人士。注册时使用下方代码。',
+    },
+    wise: {
+      tagline: '低成本国际转账',
+      description:
+        'Wise 提供按真实汇率在国外消费和转账的账户与借记卡，没有隐藏费用。注册时使用下方代码。',
+    },
+    glovo: {
+      tagline: '外卖与生活用品配送',
+      description:
+        'Glovo 可在主要城市将食物、生活用品等直接送到你家门口。使用下方代码可享受首单折扣。',
+    },
+    g2a: {
+      tagline: '数字商品市场',
+      description:
+        'G2A 是一个以折扣价出售游戏激活码、礼品卡和软件的市场，旅途中娱乐很方便。使用下方代码可享受购物折扣。',
+    },
+    wolt: {
+      tagline: '外卖配送应用',
+      description:
+        'Wolt 可从当地餐厅和商店配送食物和生活用品，在波兰多个城市均可使用。使用下方代码可享受首单折扣。',
+    },
+    lisek: {
+      tagline: '先买后付',
+      description:
+        'Lisek 可让你在参与的波兰商店分期付款购物。使用下方代码可在首次购物时获得奖励。',
+    },
+    lime: {
+      tagline: '电动滑板车与电动自行车',
+      description:
+        'Lime 的电动滑板车和电动自行车是在波兰等地城市出行的便捷方式。使用下方代码可获得免费骑行额度。',
+    },
+  },
+  extras: {
+    heading: '旅行中的其他实用应用',
+    intro: '金融、配送和出行类应用的额外优惠码，让旅行更轻松。',
   },
   faq: {
     heading: '常见问题',
@@ -87,7 +136,7 @@ export const zh: Dictionary = {
   },
   footer: {
     disclaimer:
-      '本站与 Bolt、Uber、FREENOW、GO、Yesim 均无关联。优惠码及活动由相关公司提供，可能随时变更或失效，恕不另行通知。',
+      '本站与 Bolt、FREENOW、Yesim 及本站列出的其他品牌均无关联。优惠码及活动由相关公司提供，可能随时变更或失效，恕不另行通知。',
     rights: '版权所有。',
   },
   nav: {
