@@ -3,6 +3,18 @@ export interface AppCopy {
   description: string;
 }
 
+export interface SectionCopy {
+  heading: string;
+  intro: string;
+}
+
+export interface CountryPageCopy {
+  title: string;
+  description: string;
+  heading: string;
+  intro: string;
+}
+
 export interface Dictionary {
   meta: {
     title: string;
@@ -48,9 +60,20 @@ export interface Dictionary {
     lisek: AppCopy;
     lime: AppCopy;
   };
-  extras: {
+  sections: {
+    mustHave: SectionCopy;
+    travel: SectionCopy;
+    food: SectionCopy;
+    other: SectionCopy;
+  };
+  countryPages: {
+    poland: CountryPageCopy;
+    japan: CountryPageCopy;
+  };
+  home: {
     heading: string;
     intro: string;
+    visitCountry: string;
   };
   faq: {
     heading: string;

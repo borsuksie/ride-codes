@@ -109,9 +109,42 @@ export const es: Dictionary = {
         'Los patinetes y bicis eléctricas de Lime son una forma rápida de moverte por ciudades de Polonia y otros países. Usa el código de abajo para obtener saldo gratis para tus viajes.',
     },
   },
-  extras: {
-    heading: 'Otras apps útiles para tu viaje',
-    intro: 'Códigos de descuento adicionales para apps de finanzas, entrega y movilidad que facilitan tus viajes.',
+  sections: {
+    mustHave: {
+      heading: 'Imprescindibles para el viaje',
+      intro: 'Las apps esenciales que debes configurar antes de llegar: cuenta bancaria, pagos y tu primer trayecto o eSIM, todo con códigos de descuento.',
+    },
+    travel: {
+      heading: 'Moverse por la ciudad',
+      intro: 'Apps de transporte y micromovilidad para ir del aeropuerto al hotel y moverte por la ciudad.',
+    },
+    food: {
+      heading: 'Comida y entregas',
+      intro: 'Pide comida, productos de supermercado y artículos esenciales directamente a tu puerta.',
+    },
+    other: {
+      heading: 'Más apps útiles',
+      intro: 'Códigos de descuento adicionales para apps de finanzas, seguridad y compras que facilitan tus viajes.',
+    },
+  },
+  countryPages: {
+    poland: {
+      title: 'Guía de viaje a Polonia 2026: códigos de descuento para taxi, eSIM, banco y más',
+      description: 'Planifica tu viaje a Polonia con códigos de descuento verificados para apps de transporte, eSIM, cuenta bancaria, entrega de comida y más — todo lo que necesita un turista en un solo lugar.',
+      heading: 'Guía de viaje a Polonia',
+      intro: 'Todo lo que necesitas para tu viaje a Polonia: descuentos en transporte y eSIM, una cuenta bancaria polaca, entrega de comida y otras apps para ahorrar.',
+    },
+    japan: {
+      title: 'Guía de viaje a Japón 2026: eSIM, tarjetas de viaje y códigos de descuento',
+      description: 'Planifica tu viaje a Japón con códigos de descuento para planes eSIM, tarjetas de viaje multidivisa y otras apps útiles.',
+      heading: 'Guía de viaje a Japón',
+      intro: 'Todo lo que necesitas para tu viaje a Japón: planes eSIM, tarjetas de viaje y otras apps útiles para moverte y ahorrar.',
+    },
+  },
+  home: {
+    heading: 'Elige tu destino',
+    intro: 'Elige un país para ver los mejores códigos de descuento y apps de viaje para tu próxima escapada.',
+    visitCountry: 'Ver guía',
   },
   faq: {
     heading: 'Preguntas frecuentes',

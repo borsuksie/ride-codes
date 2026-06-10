@@ -1,10 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
-import CodeCard from '../components/CodeCard.astro';
 import { getDictionary, type Locale } from '../i18n';
-import { appsByCountry, countries, extraApps, type Country } from '../data/apps';
-import { getAllCodes } from '../lib/codes';
+import { countries } from '../data/apps';
 
 interface Props {
   locale: Locale;
@@ -12,7 +10,6 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = getDictionary(locale);
-const codes = await getAllCodes();
 
 const site = Astro.site ?? new URL('https://example.com');
 const pageUrl = new URL(`/${locale}/`, site).toString();
@@ -28,49 +25,17 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: t.meta.title,
-    itemListElement: [
-      ...countries.flatMap(({ code }, countryIndex) =>
-        appsByCountry(code).map((app, i) => {
-          const entry = codes[app.id];
-          const copy = t.apps[app.i18nKey === 'yesim' && code === 'JP' ? 'yesimJp' : (app.i18nKey as keyof typeof t.apps)];
-          return {
-            '@type': 'ListItem',
-            position: countryIndex * 10 + i + 1,
-            item: {
-              '@type': 'Offer',
-              name: `${app.name} — ${t.countries[code === 'PL' ? 'poland' : 'japan']}`,
-              url: entry.url,
-              description: copy.description,
-              additionalProperty: {
-                '@type': 'PropertyValue',
-                name: 'promoCode',
-                value: entry.code,
-              },
-            },
-          };
-        })
-      ),
-      ...extraApps().map((app, i) => {
-        const entry = codes[app.id];
-        const copy = t.apps[app.i18nKey as keyof typeof t.apps];
-        return {
-          '@type': 'ListItem',
-          position: 100 + i + 1,
-          item: {
-            '@type': 'Offer',
-            name: app.name,
-            url: entry.url,
-            description: copy.description,
-            additionalProperty: {
-              '@type': 'PropertyValue',
-              name: 'promoCode',
-              value: entry.code,
-            },
-          },
-        };
-      }),
-    ],
+    name: t.home.heading,
+    itemListElement: countries.map(({ i18nKey }, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'CollectionPage',
+        name: t.countryPages[i18nKey].title,
+        url: new URL(`/${locale}/${i18nKey}/`, site).toString(),
+        about: { '@type': 'Country', name: t.countries[i18nKey] },
+      },
+    })),
   },
   {
     '@context': 'https://schema.org',
@@ -85,11 +50,6 @@ const jsonLd = [
     })),
   },
 ];
-
-function appCopy(i18nKey: string, country: Country) {
-  const key = i18nKey === 'yesim' && country === 'JP' ? 'yesimJp' : i18nKey;
-  return t.apps[key as keyof typeof t.apps];
-}
 ---
 
 <BaseLayout locale={locale} title={t.meta.title} description={t.meta.description} jsonLd={jsonLd}>
@@ -115,24 +75,16 @@ function appCopy(i18nKey: string, country: Country) {
       </div>
     </section>
 
-    {countries.map(({ code }) => (
-      <section class="country" id={code === 'PL' ? 'poland' : 'japan'}>
-        <h2>{t.countries[code === 'PL' ? 'poland' : 'japan']}</h2>
-        <p class="country-intro">{t.countries[code === 'PL' ? 'polandIntro' : 'japanIntro']}</p>
-        <div class="grid">
-          {appsByCountry(code).map((app) => (
-            <CodeCard app={app} entry={codes[app.id]} copy={appCopy(app.i18nKey, code)} card={t.card} locale={locale} />
-          ))}
-        </div>
-      </section>
-    ))}
-
-    <section class="country" id="extras">
-      <h2>{t.extras.heading}</h2>
-      <p class="country-intro">{t.extras.intro}</p>
+    <section class="destinations">
+      <h2>{t.home.heading}</h2>
+      <p class="destinations-intro">{t.home.intro}</p>
       <div class="grid">
-        {extraApps().map((app) => (
-          <CodeCard app={app} entry={codes[app.id]} copy={t.apps[app.i18nKey as keyof typeof t.apps]} card={t.card} locale={locale} />
+        {countries.map(({ i18nKey }) => (
+          <a class="destination-card" href={`/${locale}/${i18nKey}/`}>
+            <h3>{t.countries[i18nKey]}</h3>
+            <p>{t.countries[i18nKey === 'poland' ? 'polandIntro' : 'japanIntro']}</p>
+            <span class="cta">{t.home.visitCountry} →</span>
+          </a>
         ))}
       </div>
     </section>
@@ -210,15 +162,15 @@ function appCopy(i18nKey: string, country: Country) {
     font-size: 0.92rem;
   }
 
-  .country {
+  .destinations {
     margin-bottom: 2.5rem;
   }
 
-  .country h2 {
+  .destinations h2 {
     margin-bottom: 0.25rem;
   }
 
-  .country-intro {
+  .destinations-intro {
     color: var(--muted);
     margin-top: 0;
     margin-bottom: 1.25rem;
@@ -228,6 +180,40 @@ function appCopy(i18nKey: string, country: Country) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1rem;
+  }
+
+  .destination-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text);
+    border-top: 3px solid var(--accent);
+    transition: background 0.15s ease;
+  }
+
+  .destination-card:hover {
+    background: var(--surface-2);
+  }
+
+  .destination-card h3 {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  .destination-card p {
+    margin: 0;
+    color: var(--muted);
+    flex-grow: 1;
+  }
+
+  .destination-card .cta {
+    font-weight: 600;
+    color: var(--accent);
   }
 
   .faq {

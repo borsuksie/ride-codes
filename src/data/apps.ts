@@ -1,10 +1,14 @@
-export type Country = 'PL' | 'JP' | 'EXTRA';
+export type Country = 'PL' | 'JP';
+export type Section = 'mustHave' | 'food' | 'travel' | 'other';
 export type Category = 'taxi' | 'esim' | 'finance' | 'food' | 'mobility' | 'security' | 'shopping';
 
 export interface AppDef {
   /** Stable identifier, also used as the Redis key suffix */
   id: string;
-  country: Country;
+  /** Countries whose page should feature this app */
+  countries: Country[];
+  /** Which themed section of a country page this app belongs to */
+  section: Section;
   category: Category;
   /** Display name of the app/brand */
   name: string;
@@ -21,7 +25,8 @@ export interface AppDef {
 export const apps: AppDef[] = [
   {
     id: 'bolt',
-    country: 'PL',
+    countries: ['PL'],
+    section: 'travel',
     category: 'taxi',
     name: 'Bolt',
     color: '#34D07F',
@@ -31,7 +36,8 @@ export const apps: AppDef[] = [
   },
   {
     id: 'freenow',
-    country: 'PL',
+    countries: ['PL'],
+    section: 'mustHave',
     category: 'taxi',
     name: 'FREENOW',
     color: '#FFCC00',
@@ -41,7 +47,8 @@ export const apps: AppDef[] = [
   },
   {
     id: 'yesim_pl',
-    country: 'PL',
+    countries: ['PL'],
+    section: 'mustHave',
     category: 'esim',
     name: 'Yesim',
     color: '#7C5CFC',
@@ -51,7 +58,8 @@ export const apps: AppDef[] = [
   },
   {
     id: 'yesim_jp',
-    country: 'JP',
+    countries: ['JP'],
+    section: 'mustHave',
     category: 'esim',
     name: 'Yesim',
     color: '#7C5CFC',
@@ -61,7 +69,8 @@ export const apps: AppDef[] = [
   },
   {
     id: 'nordvpn',
-    country: 'EXTRA',
+    countries: ['PL', 'JP'],
+    section: 'other',
     category: 'security',
     name: 'NordVPN',
     color: '#4687FF',
@@ -71,7 +80,8 @@ export const apps: AppDef[] = [
   },
   {
     id: 'revolut',
-    country: 'EXTRA',
+    countries: ['PL', 'JP'],
+    section: 'mustHave',
     category: 'finance',
     name: 'Revolut',
     color: '#191C1F',
@@ -81,7 +91,8 @@ export const apps: AppDef[] = [
   },
   {
     id: 'mbank',
-    country: 'EXTRA',
+    countries: ['PL'],
+    section: 'mustHave',
     category: 'finance',
     name: 'mBank',
     color: '#000000',
@@ -91,7 +102,8 @@ export const apps: AppDef[] = [
   },
   {
     id: 'wise',
-    country: 'EXTRA',
+    countries: ['PL', 'JP'],
+    section: 'other',
     category: 'finance',
     name: 'Wise',
     color: '#9FE870',
@@ -101,7 +113,8 @@ export const apps: AppDef[] = [
   },
   {
     id: 'glovo',
-    country: 'EXTRA',
+    countries: ['PL'],
+    section: 'food',
     category: 'food',
     name: 'Glovo',
     color: '#FFC244',
@@ -111,7 +124,8 @@ export const apps: AppDef[] = [
   },
   {
     id: 'g2a',
-    country: 'EXTRA',
+    countries: ['PL', 'JP'],
+    section: 'other',
     category: 'shopping',
     name: 'G2A',
     color: '#F05F40',
@@ -121,7 +135,8 @@ export const apps: AppDef[] = [
   },
   {
     id: 'wolt',
-    country: 'EXTRA',
+    countries: ['PL'],
+    section: 'food',
     category: 'food',
     name: 'Wolt',
     color: '#00C2E8',
@@ -131,7 +146,8 @@ export const apps: AppDef[] = [
   },
   {
     id: 'lisek',
-    country: 'EXTRA',
+    countries: ['PL'],
+    section: 'other',
     category: 'finance',
     name: 'Lisek',
     color: '#FF6B6B',
@@ -141,7 +157,8 @@ export const apps: AppDef[] = [
   },
   {
     id: 'lime',
-    country: 'EXTRA',
+    countries: ['PL'],
+    section: 'travel',
     category: 'mobility',
     name: 'Lime',
     color: '#00B14F',
@@ -151,15 +168,17 @@ export const apps: AppDef[] = [
   },
 ];
 
-export const countries: { code: Country; i18nKey: string }[] = [
+export const countries: { code: Country; i18nKey: 'poland' | 'japan' }[] = [
   { code: 'PL', i18nKey: 'poland' },
   { code: 'JP', i18nKey: 'japan' },
 ];
 
+export const sectionOrder: Section[] = ['mustHave', 'travel', 'food', 'other'];
+
 export function appsByCountry(country: Country): AppDef[] {
-  return apps.filter((app) => app.country === country);
+  return apps.filter((app) => app.countries.includes(country));
 }
 
-export function extraApps(): AppDef[] {
-  return apps.filter((app) => app.country === 'EXTRA');
+export function appsBySection(country: Country, section: Section): AppDef[] {
+  return apps.filter((app) => app.countries.includes(country) && app.section === section);
 }

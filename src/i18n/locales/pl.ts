@@ -109,9 +109,42 @@ export const pl: Dictionary = {
         'Hulajnogi i rowery elektryczne Lime to szybki sposób na poruszanie się po miastach w Polsce i nie tylko. Użyj poniższego kodu, aby otrzymać darmowe minuty przejazdu.',
     },
   },
-  extras: {
-    heading: 'Inne przydatne aplikacje na podróż',
-    intro: 'Dodatkowe kody zniżkowe do aplikacji finansowych, dostawczych i mobilności, które ułatwią podróż.',
+  sections: {
+    mustHave: {
+      heading: 'Niezbędnik podróżnika',
+      intro: 'Najważniejsze aplikacje, które warto skonfigurować przed przyjazdem — konto bankowe, płatności oraz pierwszy przejazd lub eSIM, wszystko z kodami rabatowymi.',
+    },
+    travel: {
+      heading: 'Poruszanie się po mieście',
+      intro: 'Aplikacje do zamawiania przejazdów i mikromobilności, dzięki którym dotrzesz z lotniska do hotelu i po mieście.',
+    },
+    food: {
+      heading: 'Jedzenie i dostawy',
+      intro: 'Zamów jedzenie, zakupy spożywcze i inne niezbędne rzeczy prosto pod drzwi.',
+    },
+    other: {
+      heading: 'Więcej przydatnych aplikacji',
+      intro: 'Dodatkowe kody rabatowe na aplikacje finansowe, zabezpieczające i zakupowe, które ułatwią podróż.',
+    },
+  },
+  countryPages: {
+    poland: {
+      title: 'Polska — przewodnik dla turystów 2026: kody rabatowe na taxi, eSIM, bankowość',
+      description: 'Zaplanuj wyjazd do Polski z zweryfikowanymi kodami rabatowymi na przejazdy, eSIM, konto bankowe, dostawę jedzenia i więcej — wszystko, czego potrzebuje turysta, w jednym miejscu.',
+      heading: 'Przewodnik po Polsce',
+      intro: 'Wszystko, czego potrzebujesz na wyjazd do Polski: zniżki na przejazdy i eSIM, polskie konto bankowe, dostawa jedzenia i inne aplikacje pozwalające oszczędzać.',
+    },
+    japan: {
+      title: 'Japonia — przewodnik dla turystów 2026: eSIM, karty podróżne i kody rabatowe',
+      description: 'Zaplanuj wyjazd do Japonii z kodami rabatowymi na eSIM, wielowalutowe karty podróżne i inne przydatne aplikacje.',
+      heading: 'Przewodnik po Japonii',
+      intro: 'Wszystko, czego potrzebujesz na wyjazd do Japonii: pakiety eSIM, karty podróżne i inne przydatne aplikacje do poruszania się i oszczędzania.',
+    },
+  },
+  home: {
+    heading: 'Wybierz swój kierunek podróży',
+    intro: 'Wybierz kraj, aby zobaczyć najlepsze kody rabatowe i aplikacje podróżnicze na Twój wyjazd.',
+    visitCountry: 'Zobacz przewodnik',
   },
   faq: {
     heading: 'Najczęściej zadawane pytania',

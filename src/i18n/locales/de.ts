@@ -109,9 +109,42 @@ export const de: Dictionary = {
         'Lime E-Scooter und E-Bikes sind eine schnelle Möglichkeit, dich in Städten in Polen und darüber hinaus fortzubewegen. Nutze den Code unten für kostenloses Fahrguthaben.',
     },
   },
-  extras: {
-    heading: 'Weitere nützliche Apps für deine Reise',
-    intro: 'Zusätzliche Rabattcodes für Finanz-, Liefer- und Mobilitäts-Apps, die das Reisen erleichtern.',
+  sections: {
+    mustHave: {
+      heading: 'Das Wichtigste für deine Reise',
+      intro: 'Die wichtigsten Apps, die du vor der Ankunft einrichten solltest — Bankkonto, Zahlungen sowie deine erste Fahrt oder eSIM, alle mit Rabattcodes.',
+    },
+    travel: {
+      heading: 'Unterwegs',
+      intro: 'Fahrdienst- und Mikromobilitäts-Apps, mit denen du vom Flughafen ins Hotel und durch die Stadt kommst.',
+    },
+    food: {
+      heading: 'Essen & Lieferdienste',
+      intro: 'Bestelle Essen, Lebensmittel und alltägliche Dinge direkt vor deine Tür.',
+    },
+    other: {
+      heading: 'Weitere nützliche Apps',
+      intro: 'Zusätzliche Rabattcodes für Finanz-, Sicherheits- und Shopping-Apps, die das Reisen erleichtern.',
+    },
+  },
+  countryPages: {
+    poland: {
+      title: 'Polen-Reiseführer 2026: Rabattcodes für Taxi, eSIM, Bankkonto & mehr',
+      description: 'Plane deine Reise nach Polen mit geprüften Rabattcodes für Fahrdienste, eSIM-Datenpläne, Bankkonten, Essenslieferungen und mehr — alles, was Touristen brauchen, an einem Ort.',
+      heading: 'Polen-Reiseführer',
+      intro: 'Alles für deine Reise nach Polen: Rabatte auf Fahrdienste und eSIM, ein polnisches Bankkonto, Essenslieferungen und weitere Apps, mit denen du sparst.',
+    },
+    japan: {
+      title: 'Japan-Reiseführer 2026: eSIM, Reisekarten & Rabattcodes',
+      description: 'Plane deine Reise nach Japan mit Rabattcodes für eSIM-Datenpläne, Multiwährungs-Reisekarten und weitere nützliche Reise-Apps.',
+      heading: 'Japan-Reiseführer',
+      intro: 'Alles für deine Reise nach Japan: eSIM-Datenpläne, Reisekarten und weitere nützliche Apps für unterwegs und zum Sparen.',
+    },
+  },
+  home: {
+    heading: 'Wähle dein Reiseziel',
+    intro: 'Wähle ein Land, um die besten Rabattcodes und Reise-Apps für deine Reise zu sehen.',
+    visitCountry: 'Zum Reiseführer',
   },
   faq: {
     heading: 'Häufig gestellte Fragen',

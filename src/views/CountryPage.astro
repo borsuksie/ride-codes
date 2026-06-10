@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import CodeCard from '../components/CodeCard.astro';
+import { getDictionary, type Locale } from '../i18n';
+import { appsBySection, sectionOrder, type Country } from '../data/apps';
+import { getAllCodes } from '../lib/codes';
+
+interface Props {
+  locale: Locale;
+  country: Country;
+}
+
+const { locale, country } = Astro.props;
+const t = getDictionary(locale);
+const codes = await getAllCodes();
+
+const countryKey = country === 'PL' ? 'poland' : 'japan';
+const path = `${countryKey}/`;
+const page = t.countryPages[countryKey];
+
+const site = Astro.site ?? new URL('https://example.com');
+const pageUrl = new URL(`/${locale}/${path}`, site).toString();
+const homeUrl = new URL(`/${locale}/`, site).toString();
+
+function appCopy(i18nKey: string) {
+  const key = i18nKey === 'yesim' && country === 'JP' ? 'yesimJp' : i18nKey;
+  return t.apps[key as keyof typeof t.apps];
+}
+
+const sectionsWithApps = sectionOrder
+  .map((section) => ({ section, apps: appsBySection(country, section) }))
+  .filter(({ apps }) => apps.length > 0);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: page.title,
+    url: pageUrl,
+    description: page.description,
+    inLanguage: locale,
+    about: {
+      '@type': 'Country',
+      name: t.countries[countryKey],
+    },
+    isPartOf: {
+      '@type': 'WebSite',
+      name: t.meta.title,
+      url: homeUrl,
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: t.home.heading, item: homeUrl },
+      { '@type': 'ListItem', position: 2, name: t.countries[countryKey], item: pageUrl },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: page.title,
+    itemListElement: sectionsWithApps.flatMap(({ apps }, sectionIndex) =>
+      apps.map((app, i) => {
+        const entry = codes[app.id];
+        const copy = appCopy(app.i18nKey);
+        return {
+          '@type': 'ListItem',
+          position: sectionIndex * 10 + i + 1,
+          item: {
+            '@type': 'Offer',
+            name: `${app.name} — ${t.countries[countryKey]}`,
+            url: entry.url,
+            description: copy.description,
+            additionalProperty: {
+              '@type': 'PropertyValue',
+              name: 'promoCode',
+              value: entry.code,
+            },
+          },
+        };
+      })
+    ),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: t.faq.items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  },
+];
+---
+
+<BaseLayout locale={locale} title={page.title} description={page.description} path={path} jsonLd={jsonLd}>
+  <header class="site-header">
+    <a class="brand" href={`/${locale}/`}>🚕 RideCodes</a>
+    <LanguageSwitcher locale={locale} path={path} label={t.nav.selectLanguage} />
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href={`/${locale}/`}>{t.home.heading}</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{t.countries[countryKey]}</span>
+    </nav>
+
+    <section class="hero">
+      <h1>{page.heading}</h1>
+      <p>{page.intro}</p>
+    </section>
+
+    {sectionsWithApps.map(({ section, apps }) => (
+      <section class="section">
+        <h2>{t.sections[section].heading}</h2>
+        <p class="section-intro">{t.sections[section].intro}</p>
+        <div class="grid">
+          {apps.map((app) => (
+            <CodeCard app={app} entry={codes[app.id]} copy={appCopy(app.i18nKey)} card={t.card} locale={locale} />
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <section class="faq">
+      <h2>{t.faq.heading}</h2>
+      {t.faq.items.map((item) => (
+        <details>
+          <summary>{item.q}</summary>
+          <p>{item.a}</p>
+        </details>
+      ))}
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>{t.footer.disclaimer}</p>
+    <p>© {new Date().getFullYear()} RideCodes. {t.footer.rights}</p>
+  </footer>
+</BaseLayout>
+
+<style>
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .brand {
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  .breadcrumbs {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .breadcrumbs a {
+    color: var(--muted);
+  }
+
+  .hero {
+    padding: 1rem 0 2rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero p {
+    color: var(--muted);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .section {
+    margin-bottom: 2.5rem;
+  }
+
+  .section h2 {
+    margin-bottom: 0.25rem;
+  }
+
+  .section-intro {
+    color: var(--muted);
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .faq {
+    margin-top: 2rem;
+  }
+
+  .faq details {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .faq summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .faq p {
+    color: var(--muted);
+    margin-bottom: 0;
+  }
+
+  .site-footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 2.5rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+  }
+</style>

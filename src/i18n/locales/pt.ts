@@ -109,9 +109,42 @@ export const pt: Dictionary = {
         'As trotinetes e bicicletas elétricas Lime são uma forma rápida de se deslocar nas cidades da Polónia e além. Use o código abaixo para crédito de viagem grátis.',
     },
   },
-  extras: {
-    heading: 'Outras apps úteis para a sua viagem',
-    intro: 'Códigos de desconto extra para apps de finanças, entregas e mobilidade que facilitam as suas viagens.',
+  sections: {
+    mustHave: {
+      heading: 'Indispensáveis para a viagem',
+      intro: 'As apps essenciais para configurar antes de chegar: conta bancária, pagamentos e a sua primeira viagem ou eSIM, tudo com códigos de desconto.',
+    },
+    travel: {
+      heading: 'Deslocar-se na cidade',
+      intro: 'Apps de transporte e micromobilidade para ir do aeroporto ao hotel e circular pela cidade.',
+    },
+    food: {
+      heading: 'Comida e entregas',
+      intro: 'Peça comida, compras e outros artigos essenciais diretamente à sua porta.',
+    },
+    other: {
+      heading: 'Mais apps úteis',
+      intro: 'Códigos de desconto extra para apps de finanças, segurança e compras que facilitam as suas viagens.',
+    },
+  },
+  countryPages: {
+    poland: {
+      title: 'Guia de viagem à Polónia 2026: códigos de desconto para táxi, eSIM, banco e mais',
+      description: 'Planeie a sua viagem à Polónia com códigos de desconto verificados para apps de transporte, eSIM, conta bancária, entrega de comida e mais — tudo o que um turista precisa num só lugar.',
+      heading: 'Guia de viagem à Polónia',
+      intro: 'Tudo o que precisa para uma viagem à Polónia: descontos em transporte e eSIM, uma conta bancária polaca, entrega de comida e outras apps para poupar.',
+    },
+    japan: {
+      title: 'Guia de viagem ao Japão 2026: eSIM, cartões de viagem e códigos de desconto',
+      description: 'Planeie a sua viagem ao Japão com códigos de desconto para planos eSIM, cartões de viagem multimoeda e outras apps úteis.',
+      heading: 'Guia de viagem ao Japão',
+      intro: 'Tudo o que precisa para uma viagem ao Japão: planos eSIM, cartões de viagem e outras apps úteis para se deslocar e poupar.',
+    },
+  },
+  home: {
+    heading: 'Escolha o seu destino',
+    intro: 'Escolha um país para ver os melhores códigos de desconto e apps de viagem para a sua próxima viagem.',
+    visitCountry: 'Ver guia',
   },
   faq: {
     heading: 'Perguntas frequentes',

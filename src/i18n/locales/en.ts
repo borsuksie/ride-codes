@@ -109,9 +109,42 @@ export const en: Dictionary = {
         'Lime e-scooters and e-bikes are a fast way to get around cities in Poland and beyond. Use the code below for free ride credit.',
     },
   },
-  extras: {
-    heading: 'Other useful apps for your trip',
-    intro: 'Extra discount codes for finance, delivery and mobility apps that make traveling easier.',
+  sections: {
+    mustHave: {
+      heading: 'Travel must-haves',
+      intro: 'The essential apps every traveler should set up before arriving — banking, payments and your first ride or eSIM, all with discount codes.',
+    },
+    travel: {
+      heading: 'Getting around',
+      intro: 'Ride-hailing and micromobility apps to get from the airport to your hotel and around the city.',
+    },
+    food: {
+      heading: 'Food & delivery',
+      intro: 'Order food, groceries and everyday essentials straight to your door.',
+    },
+    other: {
+      heading: 'More useful apps',
+      intro: 'Extra discount codes for finance, security and shopping apps that make traveling easier.',
+    },
+  },
+  countryPages: {
+    poland: {
+      title: 'Poland Travel Guide 2026: Promo Codes for Taxis, eSIM, Banking & More',
+      description: 'Plan your trip to Poland with verified discount codes for ride-hailing, eSIM data, banking, food delivery and more — everything tourists need in one place.',
+      heading: 'Poland travel guide',
+      intro: 'Everything you need for a trip to Poland: ride-hailing and eSIM discounts, a Polish bank account, food delivery and other money-saving apps for tourists.',
+    },
+    japan: {
+      title: 'Japan Travel Guide 2026: eSIM, Travel Cards & Discount Codes',
+      description: 'Plan your trip to Japan with discount codes for eSIM data plans, multi-currency travel cards and other useful travel apps.',
+      heading: 'Japan travel guide',
+      intro: 'Everything you need for a trip to Japan: eSIM data plans, travel money cards and other useful apps for getting around and saving money.',
+    },
+  },
+  home: {
+    heading: 'Choose your destination',
+    intro: 'Pick your destination to see the best discount codes and travel apps for your trip.',
+    visitCountry: 'View guide',
   },
   faq: {
     heading: 'Frequently asked questions',

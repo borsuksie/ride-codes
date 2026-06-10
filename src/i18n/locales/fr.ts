@@ -109,9 +109,42 @@ export const fr: Dictionary = {
         "Les trottinettes et vélos électriques Lime sont un moyen rapide de se déplacer en ville en Pologne et ailleurs. Utilisez le code ci-dessous pour obtenir du crédit de trajet gratuit.",
     },
   },
-  extras: {
-    heading: 'Autres applications utiles pour votre voyage',
-    intro: "Codes de réduction supplémentaires pour des applications de finance, de livraison et de mobilité qui facilitent vos déplacements.",
+  sections: {
+    mustHave: {
+      heading: 'Les indispensables du voyage',
+      intro: 'Les applis essentielles à configurer avant votre arrivée : compte bancaire, paiements et votre premier trajet ou eSIM, le tout avec des codes promo.',
+    },
+    travel: {
+      heading: 'Se déplacer',
+      intro: 'Applis de VTC et de mobilité douce pour aller de l\'aéroport à votre hôtel et vous déplacer en ville.',
+    },
+    food: {
+      heading: 'Repas et livraison',
+      intro: 'Commandez repas, courses et produits du quotidien directement chez vous.',
+    },
+    other: {
+      heading: 'Autres applis utiles',
+      intro: 'Des codes promo supplémentaires pour des applis de finance, de sécurité et de shopping qui facilitent vos voyages.',
+    },
+  },
+  countryPages: {
+    poland: {
+      title: 'Guide de voyage en Pologne 2026 : codes promo taxi, eSIM, banque et plus',
+      description: 'Préparez votre voyage en Pologne avec des codes promo vérifiés pour les VTC, l\'eSIM, un compte bancaire, la livraison de repas et plus encore — tout ce dont les touristes ont besoin au même endroit.',
+      heading: 'Guide de voyage en Pologne',
+      intro: 'Tout ce qu\'il vous faut pour un voyage en Pologne : réductions sur les VTC et l\'eSIM, un compte bancaire polonais, la livraison de repas et d\'autres applis pour économiser.',
+    },
+    japan: {
+      title: 'Guide de voyage au Japon 2026 : eSIM, cartes de voyage et codes promo',
+      description: 'Préparez votre voyage au Japon avec des codes promo pour les forfaits eSIM, les cartes de paiement multidevises et d\'autres applis utiles.',
+      heading: 'Guide de voyage au Japon',
+      intro: 'Tout ce qu\'il vous faut pour un voyage au Japon : forfaits eSIM, cartes de voyage et d\'autres applis utiles pour se déplacer et économiser.',
+    },
+  },
+  home: {
+    heading: 'Choisissez votre destination',
+    intro: 'Choisissez un pays pour découvrir les meilleurs codes promo et applis de voyage pour votre séjour.',
+    visitCountry: 'Voir le guide',
   },
   faq: {
     heading: 'Questions fréquentes',

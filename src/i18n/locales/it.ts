@@ -109,9 +109,42 @@ export const it: Dictionary = {
         "I monopattini e le bici elettriche Lime sono un modo rapido per spostarsi nelle città in Polonia e oltre. Usa il codice qui sotto per credito di corsa gratuito.",
     },
   },
-  extras: {
-    heading: 'Altre app utili per il tuo viaggio',
-    intro: 'Codici sconto extra per app di finanza, consegne e mobilità che rendono i viaggi più semplici.',
+  sections: {
+    mustHave: {
+      heading: 'Indispensabili per il viaggio',
+      intro: 'Le app essenziali da configurare prima di arrivare: conto bancario, pagamenti e la tua prima corsa o eSIM, tutto con codici sconto.',
+    },
+    travel: {
+      heading: 'Spostarsi in città',
+      intro: 'App di ride-hailing e micromobilità per andare dall\'aeroporto all\'hotel e muoversi in città.',
+    },
+    food: {
+      heading: 'Cibo e consegne',
+      intro: 'Ordina cibo, spesa e altri prodotti essenziali direttamente a casa tua.',
+    },
+    other: {
+      heading: 'Altre app utili',
+      intro: 'Codici sconto extra per app di finanza, sicurezza e shopping che rendono i viaggi più semplici.',
+    },
+  },
+  countryPages: {
+    poland: {
+      title: 'Guida di viaggio in Polonia 2026: codici sconto per taxi, eSIM, banca e altro',
+      description: 'Pianifica il tuo viaggio in Polonia con codici sconto verificati per ride-hailing, eSIM, conto bancario, consegna cibo e altro — tutto ciò che serve a un turista in un unico posto.',
+      heading: 'Guida di viaggio in Polonia',
+      intro: 'Tutto quello che ti serve per un viaggio in Polonia: sconti su ride-hailing ed eSIM, un conto bancario polacco, consegna cibo e altre app per risparmiare.',
+    },
+    japan: {
+      title: 'Guida di viaggio in Giappone 2026: eSIM, carte di viaggio e codici sconto',
+      description: 'Pianifica il tuo viaggio in Giappone con codici sconto per piani eSIM, carte di viaggio multivaluta e altre app utili.',
+      heading: 'Guida di viaggio in Giappone',
+      intro: 'Tutto quello che ti serve per un viaggio in Giappone: piani eSIM, carte di viaggio e altre app utili per spostarsi e risparmiare.',
+    },
+  },
+  home: {
+    heading: 'Scegli la tua destinazione',
+    intro: 'Scegli un paese per vedere i migliori codici sconto e app di viaggio per il tuo prossimo viaggio.',
+    visitCountry: 'Vedi la guida',
   },
   faq: {
     heading: 'Domande frequenti',
