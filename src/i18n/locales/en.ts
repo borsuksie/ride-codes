@@ -146,6 +146,18 @@ export const en: Dictionary = {
     intro: 'Pick your destination to see the best discount codes and travel apps for your trip.',
     visitCountry: 'View guide',
   },
+  trust: {
+    heading: 'Why use these codes?',
+    intro: 'Every app and service listed here has been personally checked — trusted ride-hailing apps, regulated banks and well-known eSIM providers used by millions of travelers. Using a code below doesn\'t just save you money on your trip — it also means you\'re choosing apps that are safe, reliable and widely used by both locals and tourists.',
+  },
+  partners: {
+    title: 'Partner with RideCodes — Feature Your Discount Code',
+    description: 'Are you a company with a referral or discount code for travelers in Poland or Japan? Get featured on RideCodes and reach travelers looking to save money.',
+    heading: 'For businesses & partners',
+    intro: 'RideCodes helps travelers in Poland and Japan find verified discount and referral codes for ride-hailing, eSIM, banking, food delivery and other useful apps. If you represent a company with a referral or promo code program relevant to travelers, we\'d love to feature it here.',
+    note: 'This page is for companies and official brand representatives only — we\'re not able to add personal referral codes.',
+    contactLabel: 'Get in touch:',
+  },
   faq: {
     heading: 'Frequently asked questions',
     items: [
@@ -171,6 +183,7 @@ export const en: Dictionary = {
     disclaimer:
       'We are not affiliated with Bolt, FREENOW, Yesim or any other brand listed on this site. Promo codes and offers are provided by these companies and may change or expire without notice.',
     rights: 'All rights reserved.',
+    partnersLink: 'For businesses & partners',
   },
   nav: {
     selectLanguage: 'Language',

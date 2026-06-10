@@ -146,6 +146,18 @@ export const zh: Dictionary = {
     intro: '选择一个国家，查看最适合你旅程的优惠码和旅行应用。',
     visitCountry: '查看指南',
   },
+  trust: {
+    heading: '为什么要使用这些优惠码？',
+    intro: '本站列出的每一个应用和服务都经过我们亲自核实——值得信赖的打车应用、受监管的银行，以及数百万旅行者都在使用的知名eSIM服务商。使用下方的优惠码，不仅能在旅途中省钱，也意味着你选择的应用安全、可靠，并被当地人和游客广泛使用。',
+  },
+  partners: {
+    title: '与RideCodes合作 — 展示你的优惠码',
+    description: '如果你代表一家公司，拥有面向波兰或日本旅行者的推荐码或优惠码，欢迎在RideCodes上展示，触达想要省钱的旅行者。',
+    heading: '企业与合作伙伴',
+    intro: 'RideCodes 帮助前往波兰和日本的旅行者找到经过验证的打车、eSIM、银行、外卖配送等应用的优惠码和推荐码。如果你代表的公司有适合旅行者的推荐码计划，我们很乐意在本站展示。',
+    note: '本页面仅面向企业及品牌官方代表——我们无法添加个人推荐码。',
+    contactLabel: '联系我们：',
+  },
   faq: {
     heading: '常见问题',
     items: [
@@ -171,6 +183,7 @@ export const zh: Dictionary = {
     disclaimer:
       '本站与 Bolt、FREENOW、Yesim 及本站列出的其他品牌均无关联。优惠码及活动由相关公司提供，可能随时变更或失效，恕不另行通知。',
     rights: '版权所有。',
+    partnersLink: '企业与合作伙伴',
   },
   nav: {
     selectLanguage: '语言',

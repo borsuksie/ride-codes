@@ -146,6 +146,18 @@ export const pl: Dictionary = {
     intro: 'Wybierz kraj, aby zobaczyć najlepsze kody rabatowe i aplikacje podróżnicze na Twój wyjazd.',
     visitCountry: 'Zobacz przewodnik',
   },
+  trust: {
+    heading: 'Dlaczego warto korzystać z tych kodów?',
+    intro: 'Każda aplikacja i usługa na tej stronie została przez nas sprawdzona — to sprawdzone aplikacje do przejazdów, regulowane banki i znane na całym świecie dostawcy eSIM, z których korzystają miliony podróżnych. Korzystając z kodu poniżej, nie tylko oszczędzasz pieniądze podczas podróży, ale też wybierasz aplikacje bezpieczne, niezawodne i powszechnie używane zarówno przez mieszkańców, jak i turystów.',
+  },
+  partners: {
+    title: 'Współpraca z RideCodes — dodaj swój kod rabatowy',
+    description: 'Reprezentujesz firmę, która ma kod polecający lub rabatowy dla podróżnych w Polsce lub Japonii? Pojaw się na RideCodes i dotrzyj do osób szukających oszczędności.',
+    heading: 'Dla firm i partnerów',
+    intro: 'RideCodes pomaga podróżnym w Polsce i Japonii znaleźć zweryfikowane kody rabatowe i polecające do aplikacji transportowych, eSIM, bankowych, dostawy jedzenia i innych przydatnych usług. Jeśli reprezentujesz firmę z programem kodów polecających skierowanym do podróżnych, chętnie umieścimy go na naszej stronie.',
+    note: 'Ta strona jest przeznaczona wyłącznie dla firm i oficjalnych przedstawicieli marek — nie dodajemy prywatnych kodów polecających.',
+    contactLabel: 'Skontaktuj się z nami:',
+  },
   faq: {
     heading: 'Najczęściej zadawane pytania',
     items: [
@@ -171,6 +183,7 @@ export const pl: Dictionary = {
     disclaimer:
       'Nie jesteśmy powiązani z Bolt, FREENOW, Yesim ani żadną inną marką wymienioną na tej stronie. Kody promocyjne i oferty pochodzą od tych firm i mogą się zmieniać lub wygasać bez powiadomienia.',
     rights: 'Wszelkie prawa zastrzeżone.',
+    partnersLink: 'Dla firm i partnerów',
   },
   nav: {
     selectLanguage: 'Język',

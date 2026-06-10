@@ -146,6 +146,18 @@ export const es: Dictionary = {
     intro: 'Elige un país para ver los mejores códigos de descuento y apps de viaje para tu próxima escapada.',
     visitCountry: 'Ver guía',
   },
+  trust: {
+    heading: '¿Por qué usar estos códigos?',
+    intro: 'Cada app y servicio aquí listado ha sido revisado personalmente: apps de transporte de confianza, bancos regulados y proveedores de eSIM reconocidos que usan millones de viajeros. Usar un código de abajo no solo te ahorra dinero en tu viaje, sino que también significa que eliges apps seguras, fiables y muy utilizadas tanto por locales como por turistas.',
+  },
+  partners: {
+    title: 'Colabora con RideCodes — destaca tu código de descuento',
+    description: '¿Representas a una empresa con un código de referido o descuento para viajeros en Polonia o Japón? Aparece en RideCodes y llega a viajeros que buscan ahorrar.',
+    heading: 'Para empresas y socios',
+    intro: 'RideCodes ayuda a los viajeros en Polonia y Japón a encontrar códigos de descuento y referido verificados para apps de transporte, eSIM, banca, entrega de comida y otros servicios útiles. Si representas a una empresa con un programa de códigos relevante para viajeros, nos encantaría destacarlo aquí.',
+    note: 'Esta página es solo para empresas y representantes oficiales de marca; no podemos añadir códigos de referido personales.',
+    contactLabel: 'Contáctanos:',
+  },
   faq: {
     heading: 'Preguntas frecuentes',
     items: [
@@ -171,6 +183,7 @@ export const es: Dictionary = {
     disclaimer:
       'No estamos afiliados a Bolt, FREENOW, Yesim ni a ninguna otra marca mencionada en este sitio. Los códigos promocionales y ofertas son proporcionados por estas empresas y pueden cambiar o caducar sin previo aviso.',
     rights: 'Todos los derechos reservados.',
+    partnersLink: 'Para empresas y socios',
   },
   nav: {
     selectLanguage: 'Idioma',

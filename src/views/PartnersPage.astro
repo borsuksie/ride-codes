@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import { getDictionary, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+const path = 'partners/';
+
+const site = Astro.site ?? new URL('https://example.com');
+const pageUrl = new URL(`/${locale}/${path}`, site).toString();
+const homeUrl = new URL(`/${locale}/`, site).toString();
+
+const CONTACT_EMAIL = 'tomzaremba@gmail.com';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: t.partners.title,
+    url: pageUrl,
+    description: t.partners.description,
+    inLanguage: locale,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: t.meta.title,
+      url: homeUrl,
+    },
+  },
+];
+---
+
+<BaseLayout locale={locale} title={t.partners.title} description={t.partners.description} path={path} jsonLd={jsonLd}>
+  <header class="site-header">
+    <a class="brand" href={`/${locale}/`}>🚕 RideCodes</a>
+    <LanguageSwitcher locale={locale} path={path} label={t.nav.selectLanguage} />
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href={`/${locale}/`}>{t.home.heading}</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{t.partners.heading}</span>
+    </nav>
+
+    <section class="hero">
+      <h1>{t.partners.heading}</h1>
+      <p>{t.partners.intro}</p>
+    </section>
+
+    <section class="contact">
+      <p class="note">{t.partners.note}</p>
+      <p class="contact-line">
+        <span class="label">{t.partners.contactLabel}</span>
+        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>{t.footer.disclaimer}</p>
+    <p>© {new Date().getFullYear()} RideCodes. {t.footer.rights}</p>
+  </footer>
+</BaseLayout>
+
+<style>
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .brand {
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  .breadcrumbs {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .breadcrumbs a {
+    color: var(--muted);
+  }
+
+  .hero {
+    padding: 1rem 0 2rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero p {
+    color: var(--muted);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .contact {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .note {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 0;
+  }
+
+  .contact-line {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  .contact-line .label {
+    font-weight: 600;
+    margin-right: 0.5rem;
+  }
+
+  .site-footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 2.5rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+  }
+</style>

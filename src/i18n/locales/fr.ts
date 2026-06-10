@@ -146,6 +146,18 @@ export const fr: Dictionary = {
     intro: 'Choisissez un pays pour découvrir les meilleurs codes promo et applis de voyage pour votre séjour.',
     visitCountry: 'Voir le guide',
   },
+  trust: {
+    heading: 'Pourquoi utiliser ces codes ?',
+    intro: 'Chaque application et service listé ici a été vérifié personnellement — des applis de VTC fiables, des banques réglementées et des fournisseurs d\'eSIM reconnus, utilisés par des millions de voyageurs. Utiliser un code ci-dessous vous fait non seulement économiser de l\'argent pendant votre voyage, mais signifie aussi que vous choisissez des applis sûres, fiables et largement utilisées par les habitants comme par les touristes.',
+  },
+  partners: {
+    title: 'Devenez partenaire de RideCodes — mettez en avant votre code promo',
+    description: 'Vous représentez une entreprise avec un code de parrainage ou promo pour les voyageurs en Pologne ou au Japon ? Faites-vous connaître sur RideCodes et touchez des voyageurs en quête d\'économies.',
+    heading: 'Pour les entreprises et partenaires',
+    intro: 'RideCodes aide les voyageurs en Pologne et au Japon à trouver des codes promo et de parrainage vérifiés pour des applis de VTC, d\'eSIM, de banque, de livraison de repas et d\'autres services utiles. Si vous représentez une entreprise avec un programme de codes pertinent pour les voyageurs, nous serions ravis de le mettre en avant ici.',
+    note: 'Cette page s\'adresse uniquement aux entreprises et représentants officiels de marques — nous ne pouvons pas ajouter de codes de parrainage personnels.',
+    contactLabel: 'Contactez-nous :',
+  },
   faq: {
     heading: 'Questions fréquentes',
     items: [
@@ -171,6 +183,7 @@ export const fr: Dictionary = {
     disclaimer:
       "Nous ne sommes affiliés ni à Bolt, ni à FREENOW, ni à Yesim, ni à aucune autre marque mentionnée sur ce site. Les codes promo et offres proviennent de ces entreprises et peuvent changer ou expirer sans préavis.",
     rights: 'Tous droits réservés.',
+    partnersLink: 'Pour les entreprises et partenaires',
   },
   nav: {
     selectLanguage: 'Langue',

@@ -75,6 +75,15 @@ export interface Dictionary {
     intro: string;
     visitCountry: string;
   };
+  trust: SectionCopy;
+  partners: {
+    title: string;
+    description: string;
+    heading: string;
+    intro: string;
+    note: string;
+    contactLabel: string;
+  };
   faq: {
     heading: string;
     items: { q: string; a: string }[];
@@ -82,6 +91,7 @@ export interface Dictionary {
   footer: {
     disclaimer: string;
     rights: string;
+    partnersLink: string;
   };
   nav: {
     selectLanguage: string;
