@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://ride-codes.vercel.app/sitemap-index.xml
+Sitemap: https://travelcodes.app/sitemap-index.xml

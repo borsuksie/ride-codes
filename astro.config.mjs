@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ride-codes.vercel.app',
+  site: 'https://travelcodes.app',
   output: 'server',
   adapter: vercel(),
   integrations: [
