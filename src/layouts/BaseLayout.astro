@@ -1,0 +1,97 @@
+---
+import { locales, localeTags, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  /** Path after the locale prefix, e.g. "" for home. Used to build hreflang alternates. */
+  path?: string;
+  jsonLd?: Record<string, unknown>[];
+}
+
+const { locale, title, description, path = '', jsonLd = [] } = Astro.props;
+
+const site = Astro.site ?? new URL('https://example.com');
+const canonical = new URL(`/${locale}/${path}`, site).toString().replace(/\/$/, '/');
+---
+
+<!DOCTYPE html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    {locales.map((loc) => (
+      <link
+        rel="alternate"
+        hreflang={localeTags[loc]}
+        href={new URL(`/${loc}/${path}`, site).toString().replace(/\/$/, '/')}
+      />
+    ))}
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(`/en/${path}`, site).toString().replace(/\/$/, '/')}
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={localeTags[locale].replace('-', '_')} />
+    <meta name="twitter:card" content="summary" />
+
+    {jsonLd.map((entry) => (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(entry)} />
+    ))}
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #0f1115;
+    --surface: #181b22;
+    --surface-2: #20242e;
+    --text: #f4f5f7;
+    --muted: #9aa1ae;
+    --accent: #34d07f;
+    --border: #2c313c;
+    --radius: 14px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+      'Noto Sans JP', 'Noto Sans KR', 'Noto Sans SC', sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--accent);
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+</style>

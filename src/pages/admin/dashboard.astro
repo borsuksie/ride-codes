@@ -1,0 +1,197 @@
+---
+import { verifySessionToken, SESSION_COOKIE } from '../../lib/auth';
+import { apps, appsByCountry, countries } from '../../data/apps';
+import { getAllCodes, setCode } from '../../lib/codes';
+
+export const prerender = false;
+
+const sessionSecret = import.meta.env.ADMIN_SESSION_SECRET;
+const token = Astro.cookies.get(SESSION_COOKIE)?.value;
+
+if (!sessionSecret || !(await verifySessionToken(sessionSecret, token))) {
+  return Astro.redirect('/admin');
+}
+
+let message = '';
+let error = '';
+
+if (Astro.request.method === 'POST') {
+  const form = await Astro.request.formData();
+  const action = String(form.get('action') ?? '');
+
+  if (action === 'logout') {
+    Astro.cookies.delete(SESSION_COOKIE, { path: '/' });
+    return Astro.redirect('/admin');
+  }
+
+  if (action === 'update') {
+    const appId = String(form.get('appId') ?? '');
+    const code = String(form.get('code') ?? '').trim();
+    const url = String(form.get('url') ?? '').trim();
+    const app = apps.find((a) => a.id === appId);
+
+    if (!app) {
+      error = 'Nieznana aplikacja.';
+    } else if (!code || !url) {
+      error = 'Kod i adres URL są wymagane.';
+    } else {
+      try {
+        await setCode(appId, { code, url });
+        message = `Zaktualizowano kod dla ${app.name}.`;
+      } catch (e) {
+        error = e instanceof Error ? e.message : 'Nie udało się zapisać.';
+      }
+    }
+  }
+}
+
+const codes = await getAllCodes();
+const countryNames: Record<string, string> = { PL: 'Polska', JP: 'Japonia' };
+---
+
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Panel administratora — kody</title>
+  </head>
+  <body>
+    <header>
+      <h1>Kody promocyjne</h1>
+      <form method="POST">
+        <input type="hidden" name="action" value="logout" />
+        <button type="submit" class="logout">Wyloguj</button>
+      </form>
+    </header>
+
+    <main>
+      {message && <p class="msg success">{message}</p>}
+      {error && <p class="msg error">{error}</p>}
+
+      {countries.map(({ code: countryCode }) => (
+        <section>
+          <h2>{countryNames[countryCode]}</h2>
+          <div class="cards">
+            {appsByCountry(countryCode).map((app) => {
+              const entry = codes[app.id];
+              return (
+                <form method="POST" class="card">
+                  <input type="hidden" name="action" value="update" />
+                  <input type="hidden" name="appId" value={app.id} />
+                  <h3 style={`color:${app.color}`}>{app.name}</h3>
+
+                  <label for={`code-${app.id}`}>Kod promocyjny</label>
+                  <input id={`code-${app.id}`} name="code" type="text" value={entry.code} required />
+
+                  <label for={`url-${app.id}`}>Link (aplikacja / strona)</label>
+                  <input id={`url-${app.id}`} name="url" type="url" value={entry.url} required />
+
+                  {entry.updatedAt && (
+                    <p class="updated">
+                      Ostatnia aktualizacja: {new Date(entry.updatedAt).toLocaleString('pl-PL')}
+                    </p>
+                  )}
+
+                  <button type="submit">Zapisz</button>
+                </form>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+    </main>
+  </body>
+</html>
+
+<style>
+  :root {
+    color-scheme: dark;
+  }
+  body {
+    margin: 0;
+    background: #0f1115;
+    color: #f4f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #2c313c;
+  }
+  h1 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  section {
+    margin-bottom: 2rem;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .card {
+    background: #181b22;
+    border: 1px solid #2c313c;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .card h3 {
+    margin: 0 0 0.25rem;
+  }
+  label {
+    font-size: 0.8rem;
+    color: #9aa1ae;
+  }
+  input[type='text'],
+  input[type='url'] {
+    background: #20242e;
+    border: 1px solid #2c313c;
+    border-radius: 8px;
+    padding: 0.5rem 0.6rem;
+    color: #f4f5f7;
+    font-size: 0.95rem;
+  }
+  .updated {
+    font-size: 0.75rem;
+    color: #9aa1ae;
+    margin: 0;
+  }
+  button {
+    margin-top: 0.25rem;
+    background: #34d07f;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .logout {
+    background: #2c313c;
+    color: #f4f5f7;
+  }
+  .msg {
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+  }
+  .msg.success {
+    background: rgba(52, 208, 127, 0.15);
+    color: #34d07f;
+  }
+  .msg.error {
+    background: rgba(255, 107, 107, 0.15);
+    color: #ff6b6b;
+  }
+</style>

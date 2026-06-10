@@ -1,0 +1,191 @@
+---
+import type { AppDef } from '../data/apps';
+import type { AppCopy, Dictionary } from '../i18n';
+import type { CodeEntry } from '../lib/codes';
+
+interface Props {
+  app: AppDef;
+  entry: CodeEntry;
+  copy: AppCopy;
+  card: Dictionary['card'];
+  locale: string;
+}
+
+const { app, entry, copy, card, locale } = Astro.props;
+
+const updatedLabel = entry.updatedAt
+  ? new Date(entry.updatedAt).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
+  : null;
+
+const initial = app.name.trim().charAt(0).toUpperCase();
+---
+
+<article class="card" style={`--brand: ${app.color}`}>
+  <div class="card-head">
+    <div class="logo" aria-hidden="true">{initial}</div>
+    <div>
+      <h3>{app.name}</h3>
+      <p class="tagline">{copy.tagline}</p>
+    </div>
+  </div>
+
+  <p class="description">{copy.description}</p>
+
+  <button class="code-btn" type="button" data-code={entry.code} data-url={entry.url} data-copied-text={card.copied}>
+    <span class="code-label">{card.codeLabel}</span>
+    <span class="code-value">{entry.code}</span>
+    <span class="cta">{card.copyButton}</span>
+  </button>
+
+  <div class="meta">
+    <a href={entry.url} target="_blank" rel="noopener noreferrer">{card.visit} ↗</a>
+    {updatedLabel && <span class="updated">{card.updated}: {updatedLabel}</span>}
+  </div>
+</article>
+
+<style>
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    border-top: 3px solid var(--brand);
+  }
+
+  .card-head {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--brand);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .tagline {
+    margin: 0.15rem 0 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .description {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+    flex-grow: 1;
+  }
+
+  .code-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+    background: var(--surface-2);
+    border: 1px dashed var(--brand);
+    border-radius: 10px;
+    padding: 0.7rem 0.9rem;
+    color: var(--text);
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
+    transition: background 0.15s ease;
+  }
+
+  .code-btn:hover {
+    background: #262b36;
+  }
+
+  .code-btn.copied {
+    border-style: solid;
+  }
+
+  .code-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    width: 100%;
+  }
+
+  .code-value {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    color: var(--brand);
+  }
+
+  .cta {
+    margin-left: auto;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  .meta a {
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+</style>
+
+<script>
+  function setupCodeButtons() {
+    document.querySelectorAll<HTMLButtonElement>('.code-btn').forEach((btn) => {
+      if (btn.dataset.bound) return;
+      btn.dataset.bound = 'true';
+
+      btn.addEventListener('click', async () => {
+        const code = btn.dataset.code ?? '';
+        const url = btn.dataset.url ?? '';
+        const ctaEl = btn.querySelector('.cta');
+        const originalText = ctaEl?.textContent ?? '';
+
+        try {
+          await navigator.clipboard.writeText(code);
+        } catch {
+          // Clipboard API unavailable (e.g. insecure context) — continue to redirect anyway.
+        }
+
+        btn.classList.add('copied');
+        if (ctaEl) ctaEl.textContent = btn.dataset.copiedText ?? originalText;
+
+        setTimeout(() => {
+          if (url) window.open(url, '_blank', 'noopener,noreferrer');
+          if (ctaEl) ctaEl.textContent = originalText;
+          btn.classList.remove('copied');
+        }, 600);
+      });
+    });
+  }
+
+  setupCodeButtons();
+  document.addEventListener('astro:page-load', setupCodeButtons);
+</script>
