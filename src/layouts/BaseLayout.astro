@@ -1,5 +1,6 @@
 ---
 import Analytics from '@vercel/analytics/astro';
+import SpeedInsights from '@vercel/speed-insights/astro';
 import { locales, localeTags, type Locale } from '../i18n';
 
 interface Props {
@@ -54,6 +55,7 @@ const canonical = new URL(`/${locale}/${path}`, site).toString().replace(/\/$/, 
   <body>
     <slot />
     <Analytics />
+    <SpeedInsights />
   </body>
 </html>
 
