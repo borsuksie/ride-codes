@@ -33,13 +33,13 @@ const isLinkCode = /^https?:\/\//i.test(entry.code);
   <p class="description">{copy.description}</p>
 
   {isLinkCode ? (
-    <a class="code-btn link-btn" href={entry.code} target="_blank" rel="noopener noreferrer">
+    <a class="code-btn link-btn" href={entry.code} target="_blank" rel="noopener noreferrer" data-app-id={app.id} data-track-click="true">
       <span class="code-label">{card.linkLabel}</span>
       <span class="code-value">{card.openLink}</span>
       <span class="cta">{card.visit} ↗</span>
     </a>
   ) : (
-    <button class="code-btn" type="button" data-code={entry.code} data-url={entry.url} data-copied-text={card.copied}>
+    <button class="code-btn" type="button" data-app-id={app.id} data-code={entry.code} data-url={entry.url} data-copied-text={card.copied}>
       <span class="code-label">{card.codeLabel}</span>
       <span class="code-value">{entry.code}</span>
       <span class="cta">{card.copyButton}</span>
@@ -170,8 +170,18 @@ const isLinkCode = /^https?:\/\//i.test(entry.code);
 </style>
 
 <script>
+  function trackClick(appId: string | undefined) {
+    if (!appId) return;
+    fetch('/api/click', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ appId }),
+      keepalive: true,
+    }).catch(() => {});
+  }
+
   function setupCodeButtons() {
-    document.querySelectorAll<HTMLButtonElement>('.code-btn').forEach((btn) => {
+    document.querySelectorAll<HTMLButtonElement>('button.code-btn').forEach((btn) => {
       if (btn.dataset.bound) return;
       btn.dataset.bound = 'true';
 
@@ -180,6 +190,8 @@ const isLinkCode = /^https?:\/\//i.test(entry.code);
         const url = btn.dataset.url ?? '';
         const ctaEl = btn.querySelector('.cta');
         const originalText = ctaEl?.textContent ?? '';
+
+        trackClick(btn.dataset.appId);
 
         try {
           await navigator.clipboard.writeText(code);
@@ -196,6 +208,12 @@ const isLinkCode = /^https?:\/\//i.test(entry.code);
           btn.classList.remove('copied');
         }, 600);
       });
+    });
+
+    document.querySelectorAll<HTMLAnchorElement>('a[data-track-click]').forEach((link) => {
+      if (link.dataset.bound) return;
+      link.dataset.bound = 'true';
+      link.addEventListener('click', () => trackClick(link.dataset.appId));
     });
   }
 

@@ -1,7 +1,7 @@
 ---
 import { verifySessionToken, SESSION_COOKIE } from '../../lib/auth';
 import { apps, appsByCountry, countries } from '../../data/apps';
-import { getAllCodes, setCode } from '../../lib/codes';
+import { getAllCodes, setCode, getAllClickCounts } from '../../lib/codes';
 
 export const prerender = false;
 
@@ -46,6 +46,7 @@ if (Astro.request.method === 'POST') {
 }
 
 const codes = await getAllCodes();
+const clicks = await getAllClickCounts();
 const countryNames: Record<string, string> = { PL: 'Polska', JP: 'Japonia' };
 ---
 
@@ -80,6 +81,7 @@ const countryNames: Record<string, string> = { PL: 'Polska', JP: 'Japonia' };
                   <input type="hidden" name="action" value="update" />
                   <input type="hidden" name="appId" value={app.id} />
                   <h3 style={`color:${app.color}`}>{app.name}</h3>
+                  <p class="clicks">Kliknięcia: {clicks[app.id] ?? 0}</p>
 
                   <label for={`code-${app.id}`}>Kod promocyjny</label>
                   <input id={`code-${app.id}`} name="code" type="text" value={entry.code} required />
@@ -149,6 +151,11 @@ const countryNames: Record<string, string> = { PL: 'Polska', JP: 'Japonia' };
   }
   .card h3 {
     margin: 0 0 0.25rem;
+  }
+  .clicks {
+    margin: 0 0 0.25rem;
+    font-size: 0.8rem;
+    color: #9aa1ae;
   }
   label {
     font-size: 0.8rem;

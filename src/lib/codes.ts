@@ -57,3 +57,27 @@ export async function setCode(appId: string, entry: { code: string; url: string 
   };
   await client.set(`code:${appId}`, value);
 }
+
+/** Increments the click counter for an app. No-op if Redis isn't configured. */
+export async function recordClick(appId: string): Promise<void> {
+  const client = getRedis();
+  if (!client) return;
+  await client.incr(`clicks:${appId}`);
+}
+
+/** Returns the click count for every app (0 if never clicked or Redis isn't configured). */
+export async function getAllClickCounts(): Promise<Record<string, number>> {
+  const result: Record<string, number> = {};
+  for (const app of apps) result[app.id] = 0;
+
+  const client = getRedis();
+  if (!client) return result;
+
+  const keys = apps.map((app) => `clicks:${app.id}`);
+  const counts = await client.mget<(number | null)[]>(...keys);
+  apps.forEach((app, i) => {
+    result[app.id] = counts[i] ?? 0;
+  });
+
+  return result;
+}
