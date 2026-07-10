@@ -26,3 +26,5 @@ pnpm-debug.log*
 
 # local Claude Code settings (may contain history with secrets)
 .claude/
+
+.vercel
